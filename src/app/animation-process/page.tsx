@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionTitle } from "@/components/SectionTitle";
 import { animationProcess } from "@/data/extraSections";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function AnimationProcessPage() {
   return (
@@ -16,7 +16,7 @@ export default function AnimationProcessPage() {
           <article className="process-step" key={step.title}>
             <div className="process-number">{String(index + 1).padStart(2, "0")}</div>
             <div className="process-image">
-              <Image src={assetPath(step.image)} alt={step.title} fill sizes="(max-width: 900px) 100vw, 42vw" />
+              <Image src={assetPath(thumbnailPath(step.image))} alt={step.title} fill sizes="(max-width: 900px) 100vw, 42vw" />
             </div>
             <div className="process-copy">
               <h2>{step.title}</h2>

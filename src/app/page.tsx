@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWorks, works } from "@/data/works";
 import { profile } from "@/data/profile";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-visual" aria-label="Featured artwork">
-          <Image src={assetPath("/assets/yumegatari-title.png")} alt="夢語りはティータイムのあとで" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
+          <Image src={assetPath(thumbnailPath("/assets/yumegatari-title.png"))} alt="夢語りはティータイムのあとで" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
         </div>
       </section>
 

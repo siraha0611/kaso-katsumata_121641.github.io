@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Work } from "@/data/works";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 type WorkCardProps = {
   work: Work;
@@ -12,7 +12,7 @@ export function WorkCard({ work, priority = false }: WorkCardProps) {
   return (
     <Link className="work-card" href={`/works/${work.slug}`}>
       <div className="work-card-image">
-        <Image src={assetPath(work.hero)} alt={work.title} fill sizes="(max-width: 768px) 100vw, 33vw" priority={priority} />
+        <Image src={assetPath(thumbnailPath(work.hero))} alt={work.title} fill sizes="(max-width: 768px) 100vw, 33vw" priority={priority} />
       </div>
       <div className="work-card-body">
         <div className="meta-row">

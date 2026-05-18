@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionTitle } from "@/components/SectionTitle";
 import { commissionCases } from "@/data/extraSections";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function CommissionPage() {
   return (
@@ -21,9 +21,9 @@ export default function CommissionPage() {
             </div>
             <div className="commission-images">
               {item.images.map((image, index) => (
-                <div className="commission-image" key={image}>
-                  <Image src={assetPath(image)} alt={`${item.title} ${index + 1}`} fill sizes="(max-width: 768px) 100vw, 28vw" />
-                </div>
+                <a className="commission-image" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>
+                  <Image src={assetPath(thumbnailPath(image))} alt={`${item.title} ${index + 1}`} fill sizes="(max-width: 768px) 100vw, 28vw" />
+                </a>
               ))}
             </div>
           </article>

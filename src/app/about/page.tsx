@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionTitle } from "@/components/SectionTitle";
 import { profile } from "@/data/profile";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function AboutPage() {
   return (
@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section className="about-layout">
         <div className="profile-panel">
           <div className="profile-image">
-            <Image src={assetPath(profile.portrait)} alt={profile.handle} fill sizes="(max-width: 900px) 100vw, 34vw" priority />
+            <Image src={assetPath(thumbnailPath(profile.portrait))} alt={profile.handle} fill sizes="(max-width: 900px) 100vw, 34vw" priority />
           </div>
           <p>{profile.handle}</p>
           <h1>{profile.nameJa}</h1>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionTitle } from "@/components/SectionTitle";
 import { galleryImages } from "@/data/extraSections";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function GalleryPage() {
   return (
@@ -13,9 +13,9 @@ export default function GalleryPage() {
       />
       <section className="masonry-gallery">
         {galleryImages.map((image, index) => (
-          <div className="masonry-item" key={`${image}-${index}`}>
-            <Image src={assetPath(image)} alt={`立ち絵 ${index + 1}`} fill sizes="(max-width: 768px) 50vw, 25vw" />
-          </div>
+          <a className="masonry-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={`${image}-${index}`}>
+            <Image src={assetPath(thumbnailPath(image))} alt={`立ち絵 ${index + 1}`} fill sizes="(max-width: 768px) 50vw, 25vw" />
+          </a>
         ))}
       </section>
     </main>

@@ -376,10 +376,13 @@ a {
 }
 
 .masonry-item {
+  display: block;
   position: relative;
   min-height: 360px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.6);
+  color: inherit;
+  text-decoration: none;
 }
 
 .masonry-item:nth-child(3n + 1) {
@@ -439,9 +442,12 @@ a {
 }
 
 .commission-image {
+  display: block;
   position: relative;
   min-height: 330px;
   background: var(--soft-paper);
+  color: inherit;
+  text-decoration: none;
 }
 
 .process-step {
@@ -554,10 +560,13 @@ a {
 }
 
 .gallery-item {
+  display: block;
   position: relative;
   min-height: 360px;
   border: 1px solid var(--line);
   background: var(--soft-paper);
+  color: inherit;
+  text-decoration: none;
 }
 
 .replace-note {

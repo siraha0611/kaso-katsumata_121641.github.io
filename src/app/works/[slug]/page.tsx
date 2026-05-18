@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getWork, works } from "@/data/works";
-import { assetPath } from "@/lib/assetPath";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 type WorkDetailPageProps = {
   params: {
@@ -45,13 +45,13 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
           </div>
         </div>
         <div className="detail-visual">
-          <Image src={assetPath(work.hero)} alt={work.title} fill priority sizes="(max-width: 900px) 100vw, 50vw" />
+          <Image src={assetPath(thumbnailPath(work.hero))} alt={work.title} fill priority sizes="(max-width: 900px) 100vw, 50vw" />
         </div>
       </section>
 
       {work.video ? (
         <section className="media-section">
-          <video controls preload="metadata" poster={assetPath(work.hero)}>
+          <video controls preload="metadata" poster={assetPath(thumbnailPath(work.hero))}>
             <source src={assetPath(work.video)} type="video/mp4" />
           </video>
         </section>
@@ -86,9 +86,9 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
 
       <section className="gallery">
         {work.images.map((image) => (
-          <div className="gallery-item" key={image}>
-            <Image src={assetPath(image)} alt={`${work.title} image`} fill sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
+          <a className="gallery-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>
+            <Image src={assetPath(thumbnailPath(image))} alt={`${work.title} image`} fill sizes="(max-width: 768px) 100vw, 50vw" />
+          </a>
         ))}
       </section>
 
