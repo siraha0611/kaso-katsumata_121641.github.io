@@ -70,14 +70,24 @@ export const profile = {
   ],
   featuredLinks: [
     {
+      label: "新作頒布",
+      description: "【CCFOLIA対応】動く部屋装飾素材集 20種を公開しました。",
+      href: "https://kasokatsumata.booth.pm/items/8534366"
+    },
+    {
+      label: "背景素材集",
+      description: "ドリームランド背景集 158枚を頒布中です。",
+      href: "https://kasokatsumata.booth.pm/items/8495851"
+    },
+    {
       label: "最新の動画",
       description: "YouTubeをはじめました。",
       href: "https://youtu.be/WgiRar766-E"
     },
     {
       label: "記事公開",
-      description: "5年間の歩みを記事にしました。",
-      href: "https://note.com/061112160922/n/na13f99d47478"
+      description: "クトゥルフ神話TRPGの遊び方を連載しています。",
+      href: "https://note.com/061112160922"
     }
   ],
   youtube: {
