@@ -75,6 +75,30 @@ export const galleryImages = [
 
 export const publishedItems = [
   {
+    title: "【CCFOLIA対応】動く部屋装飾素材集 20種",
+    description: "回転立体・リング・走査線・儀式陣の幾何ループ。白・黒40点入りの最新頒布素材（¥100）。",
+    image: "/assets/trpg-scenario.png",
+    href: "https://kasokatsumata.booth.pm/items/8534366"
+  },
+  {
+    title: "【CCFOLIA対応】クトゥルフ・ホラー素材集 23種",
+    description: "魔法陣・触手・古代文字・狂気SAN・神話演出の発光アニメ素材集（¥100）。",
+    image: "/assets/celephais-map.png",
+    href: "https://kasokatsumata.booth.pm/items/8530526"
+  },
+  {
+    title: "【CCFOLIA対応】魔法・戦闘エフェクト素材集 20種",
+    description: "炎・雷・爆発・召喚陣の発光アニメ。セッションを彩る演出素材集（¥100）。",
+    image: "/assets/core-poster.png",
+    href: "https://kasokatsumata.booth.pm/items/8527650"
+  },
+  {
+    title: "【TRPG背景素材】ドリームランド背景集 158枚",
+    description: "幻夢境・クトゥルフ神話をテーマにした背景画像集（¥400）。",
+    image: "/assets/dreamland-map.png",
+    href: "https://kasokatsumata.booth.pm/items/8495851"
+  },
+  {
     title: "夢語りはティータイムのあとで",
     description: "喫茶店と夢を舞台にしたTRPGシナリオ。ロゴ、頒布画像、NPC、MAP、セッション素材を含む作品。",
     image: "/assets/yumegatari-title.png",
