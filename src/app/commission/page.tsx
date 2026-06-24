@@ -7,6 +7,7 @@ export default function CommissionPage() {
   return (
     <main className="page-shell">
       <SectionTitle
+        as="h1"
         eyebrow="Commission"
         title="依頼制作"
         description="ヒアリング、ラフ、線画、完成までの制作工程をまとめています。"

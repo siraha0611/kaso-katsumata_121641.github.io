@@ -27,6 +27,32 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="section compact">
+        <SectionTitle eyebrow="Highlights" title="主な実績" />
+        <ul className="highlight-list">
+          {profile.highlights.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+      <section className="section compact">
+        <SectionTitle
+          eyebrow="Journey"
+          title="これまでの歩み"
+          description="作ることを通じて、自分の表現を見つけてきた歩みです。"
+        />
+        <ol className="journey-timeline">
+          {profile.journey.map((step) => (
+            <li className="journey-item" key={step.year}>
+              <span className="journey-year">{step.year}</span>
+              <div className="journey-body">
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section className="section compact">
         <SectionTitle eyebrow="Stance" title="制作スタンス" />
         <div className="stance-grid">
           {profile.stance.map((item) => (
@@ -44,6 +70,17 @@ export default function AboutPage() {
             <span key={skill}>{skill}</span>
           ))}
         </div>
+      </section>
+      <section className="section compact about-readmore">
+        <p>5年間の歩みは、note にも詳しくまとめています。</p>
+        <a
+          className="button"
+          href="https://note.com/061112160922/n/na13f99d47478"
+          target="_blank"
+          rel="noreferrer"
+        >
+          5年間の振り返りを読む（note） →
+        </a>
       </section>
     </main>
   );

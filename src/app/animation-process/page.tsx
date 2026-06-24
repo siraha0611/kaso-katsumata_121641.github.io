@@ -7,6 +7,7 @@ export default function AnimationProcessPage() {
   return (
     <main className="page-shell">
       <SectionTitle
+        as="h1"
         eyebrow="Animation Process"
         title="CORE 制作工程"
         description="企画、設定、作業表、Vコンテ、LOまでの工程をまとめています。"

@@ -104,9 +104,9 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
       </section>
 
       <section className="gallery">
-        {work.images.map((image) => (
+        {work.images.map((image, index) => (
           <a className="gallery-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>
-            <Image src={assetPath(thumbnailPath(image))} alt={`${work.title} image`} fill sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src={assetPath(thumbnailPath(image))} alt={`${work.title} 作品画像 ${index + 1}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
           </a>
         ))}
       </section>

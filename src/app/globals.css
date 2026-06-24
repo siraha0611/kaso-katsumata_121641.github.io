@@ -199,6 +199,7 @@ a {
   margin-bottom: 28px;
 }
 
+.section-title h1,
 .section-title h2 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
@@ -331,6 +332,95 @@ a {
   padding: 10px 14px;
   color: var(--smoke);
   font-size: 13px;
+}
+
+.highlight-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.highlight-list li {
+  position: relative;
+  padding: 14px 18px 14px 38px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.highlight-list li::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--gold);
+}
+
+.journey-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--gold-soft);
+}
+
+.journey-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  padding: 18px 0 18px 22px;
+  position: relative;
+}
+
+.journey-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--paper);
+}
+
+.journey-year {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  color: var(--rose-dark);
+  letter-spacing: 0.04em;
+}
+
+.journey-body h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.journey-body p {
+  margin: 0;
+  color: var(--smoke);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-readmore {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .journey-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
 }
 
 .stance-grid {

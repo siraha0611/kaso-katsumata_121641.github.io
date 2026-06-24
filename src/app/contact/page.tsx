@@ -6,6 +6,7 @@ export default function ContactPage() {
   return (
     <main className="page-shell contact-page">
       <SectionTitle
+        as="h1"
         eyebrow="Contact"
         title="お問い合わせ"
         description="制作物や活動に関する連絡先です。"

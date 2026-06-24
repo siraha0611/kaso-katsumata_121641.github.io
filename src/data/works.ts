@@ -221,34 +221,40 @@ export const works: Work[] = [
   },
   {
     slug: "core-animation",
-    title: "CORE",
-    subtitle: "卒業制作アニメーション",
+    title: "-CORE-",
+    subtitle: "卒業制作アニメーション ／ 卒業制作展 最優秀賞",
     category: "アニメーション",
     year: "2024",
-    hero: "/assets/core-poster.png",
+    hero: "/assets/core-flyer-front.png",
     images: [
-      "/assets/core-poster.png",
-      "/assets/research.png",
-      "/assets/core-yato-turnaround.png",
-      "/assets/core-doctor-turnaround.png",
+      "/assets/core-flyer-front.png",
+      "/assets/core-yato-design.png",
+      "/assets/core-doctor-design.png",
+      "/assets/core-yato-sword.png",
       "/assets/core-imageboard.jpg",
+      "/assets/core-lo-frame.png",
       "/assets/core-shot-081.png",
-      "/assets/core-shot-041.png"
+      "/assets/core-shot-041.png",
+      "/assets/research.png"
     ],
     youtube: "https://www.youtube.com/embed/Go7ThQ1DOP4",
+    link: {
+      href: "https://youtu.be/Go7ThQ1DOP4",
+      label: "本編を見る"
+    },
     excerpt:
-      "SF和風アクションを軸にした卒業制作アニメーション。キャラクター、世界観、絵コンテ、LO、映像制作を含む作品。",
+      "和風SFアクションを軸にした卒業制作アニメーション。企画から作画・編集まで手がけ、卒業制作展で最優秀賞を受賞しました。",
     concept:
-      "義体、刀、赤い空間、都市構造をモチーフに、静かな緊張感と斬撃の瞬間を見せるアニメーションとして設計しました。",
-    role: ["企画", "キャラクター設定", "世界観設計", "絵コンテ", "LO", "作画", "編集"],
+      "義体、刀、赤い空間、都市構造をモチーフに、静かな緊張感と斬撃の瞬間を見せる和風SFアクションとして設計しました。「断ち斬るは己の宿命」――主人公ヤトの覚悟を軸に、世界観・キャラクター・映像を一本に束ねています。",
+    role: ["企画・監督", "キャラクターデザイン", "絵コンテ／演出", "背景", "編集"],
     tools: ["CLIP STUDIO PAINT", "After Effects", "Premiere Pro"],
     process: [
-      "企画書、脚本、キャラクター三面図、世界観イメージを作成",
-      "絵コンテとVコンテでカットごとのテンポを確認",
-      "LO、作画、撮影、編集を進め、短尺映像としてまとめる"
+      "企画書・脚本・キャラクター三面図・世界観イメージで作品の核を固める",
+      "絵コンテとVコンテでカットごとのテンポと画面設計を検証",
+      "LO・作画・背景・撮影・編集を進め、一本の映像作品として完成"
     ],
     outcome:
-      "キャラクターと世界観を立てた上で、映像として動かすところまで制作した総合的なアニメーション作品です。"
+      "約1年半をかけた集大成。卒業制作展で最優秀賞を受賞し、企画・キャラクター・映像までを一貫して手がけた代表作です。"
   },
   {
     slug: "research-and-maps",

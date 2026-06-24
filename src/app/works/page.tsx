@@ -6,6 +6,7 @@ export default function WorksPage() {
   return (
     <main className="page-shell">
       <SectionTitle
+        as="h1"
         eyebrow="Works"
         title="作品一覧"
         description="TRPGシナリオ、立ち絵、アニメーション、MAP・資料制作を掲載しています。"

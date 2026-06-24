@@ -7,6 +7,7 @@ export default function GalleryPage() {
   return (
     <main className="page-shell">
       <SectionTitle
+        as="h1"
         eyebrow="Gallery"
         title="立ち絵ギャラリー"
         description="TRPG探索者・NPCの立ち絵をまとめた一覧です。"

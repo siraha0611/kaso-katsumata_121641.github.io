@@ -8,6 +8,7 @@ export default function PublishedPage() {
   return (
     <main className="page-shell">
       <SectionTitle
+        as="h1"
         eyebrow="Published"
         title="公開・頒布作品"
         description="BOOTHやYouTubeなど、外部で公開している作品への導線です。"
