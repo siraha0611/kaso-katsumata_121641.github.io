@@ -15,6 +15,7 @@ export type Work = {
   hero: string;
   images: string[];
   video?: string;
+  youtube?: string;
   excerpt: string;
   concept: string;
   role: string[];
@@ -227,13 +228,14 @@ export const works: Work[] = [
     hero: "/assets/core-poster.png",
     images: [
       "/assets/core-poster.png",
+      "/assets/research.png",
       "/assets/core-yato-turnaround.png",
       "/assets/core-doctor-turnaround.png",
       "/assets/core-imageboard.jpg",
       "/assets/core-shot-081.png",
       "/assets/core-shot-041.png"
     ],
-    video: "/assets/core-lo-001.mp4",
+    youtube: "https://www.youtube.com/embed/Go7ThQ1DOP4",
     excerpt:
       "SF和風アクションを軸にした卒業制作アニメーション。キャラクター、世界観、絵コンテ、LO、映像制作を含む作品。",
     concept:
@@ -287,7 +289,6 @@ export const works: Work[] = [
       "/assets/dreamland-map.png",
       "/assets/celephais-map.png",
       "/assets/astrea-menu.png",
-      "/assets/research.png",
       "/assets/trpg-scenario.png"
     ],
     excerpt:
@@ -369,27 +370,27 @@ export const works: Work[] = [
     subtitle: "クトゥルフ神話TRPG 情報ポータル",
     category: "Web/企画",
     year: "2026",
-    hero: "/assets/taku-home.png",
+    hero: "/assets/taku-slide-1.png",
     images: [
-      "/assets/taku-home.png",
-      "/assets/taku-tools.png",
-      "/assets/taku-rp.png",
-      "/assets/taku-ogp.png"
+      "/assets/taku-slide-1.png",
+      "/assets/taku-slide-2.png",
+      "/assets/taku-slide-3.png",
+      "/assets/taku-slide-4.png"
     ],
     link: {
       href: "https://takuwith-coc.com/",
       label: "サイトを見る"
     },
     excerpt:
-      "クトゥルフ神話TRPGの新作・コラボ・イベント・公式情報を一か所に集めた情報ポータルサイト。",
+      "散らばったクトゥルフ神話TRPG(CoC)の情報を、ひとつの入口に。新作・公式・コラボ・大型イベントを一次ソースつきで集約した情報ポータル。",
     concept:
-      "「卓を囲む前の情報集め」を一つにまとめることをテーマに、ニュース・シナリオ・コラボ・イベントを横断して探せる導線を設計しました。プレイヤーがすぐ使えるダイス／判定ツールや、はじめての人向けの案内も同じ場所にまとめています。",
+      "「卓を囲む前の情報集め」をひとつの入口にまとめることをテーマにした情報ポータルです。①散らばった情報を集める（新作・公式・コラボ・イベント）、②遊びを支える道具（ダイス判定・用語集・カレンダー購読）、③はじめての人にやさしい入口、の3つを柱に、はじめての人にもわかる順番で並べ直しています。",
     role: ["企画", "情報設計", "UIデザイン", "編集・運用", "実装"],
     tools: ["Next.js", "microCMS", "Vercel", "TypeScript"],
     process: [
-      "知りたい情報(新作・コラボ・イベント・公式)を整理し、トップのクイックアクセスとして再構成",
-      "更新が続く情報サイトとして、記事をCMSで管理し公開までの運用フローを構築",
-      "ダイス判定ツールやRP入門ページなど、来訪者がその場で使える機能を実装"
+      "散らばった情報(新作・公式・コラボ・イベント)を一次ソースつきで集約し、トップのクイックアクセスとして再構成",
+      "ブラウザだけで使えるダイス判定ツール・用語集・カレンダー購読など、遊びを支える道具を実装",
+      "「RPって、なに？」から始まる導入や初心者ガイドなど、はじめての人にやさしい入口を用意"
     ],
     outcome:
       "本番公開し、クトゥルフ神話TRPGの情報を継続的に届ける拠点として運用しています。"
@@ -416,16 +417,16 @@ export const works: Work[] = [
     excerpt:
       "オンラインセッション(ココフォリア等)で使う、動く背景・カットイン・戦闘エフェクトなどの演出素材。",
     concept:
-      "セッション画面に“動き”を足して、その場の空気を作る演出素材です。全画面の天候背景、判定を盛り上げるカットイン、魔法・戦闘のエフェクトまで、用途別にまとめたパックとして制作しています。",
-    role: ["演出素材制作", "モーション", "画面設計", "パッケージング"],
-    tools: ["After Effects", "Photoshop", "Python(自動生成)", "CLIP STUDIO PAINT"],
+      "セッション画面に“動き”を足して、その場の空気を作る演出素材です。全画面の天候背景、判定を盛り上げるカットイン、魔法・戦闘のエフェクトまで、用途別にまとめたパックとして制作しています。制作には画像生成AIとPythonによる自動生成を取り入れ、量産と品質の両立を図っています。",
+    role: ["企画", "AI画像生成", "演出素材制作", "画面設計", "パッケージング"],
+    tools: ["生成AI", "Python(自動生成)", "After Effects", "Photoshop"],
     process: [
       "セッションで欲しくなる場面(天候・登場・戦闘・感情)を洗い出し、ジャンル別に素材を設計",
       "発光や合成を作り込み、ループしても破綻しない“本物の光”の見え方に調整",
       "オンラインセッションツールで使いやすいよう、軽量化して配布形式に整理"
     ],
     outcome:
-      "9カテゴリ・全192種を含む複数のパックとしてまとめ、BOOTHで頒布しています。"
+      "9カテゴリ・全192種を含む複数のパックとしてまとめ、BOOTHで頒布しています。いずれもAIを活用して制作した素材です。"
   }
 ];
 

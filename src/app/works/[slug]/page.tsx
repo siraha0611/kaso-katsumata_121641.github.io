@@ -56,7 +56,19 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
         </div>
       </section>
 
-      {work.video ? (
+      {work.youtube ? (
+        <section className="media-section">
+          <div className="video-embed">
+            <iframe
+              src={work.youtube}
+              title={work.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+        </section>
+      ) : work.video ? (
         <section className="media-section">
           <video controls preload="metadata" poster={assetPath(thumbnailPath(work.hero))}>
             <source src={assetPath(work.video)} type="video/mp4" />
