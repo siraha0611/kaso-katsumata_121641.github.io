@@ -3,6 +3,7 @@ export type WorkCategory =
   | "イラスト"
   | "アニメーション"
   | "研究"
+  | "Web/企画"
   | "映像/トレーラー";
 
 export type Work = {
@@ -20,6 +21,7 @@ export type Work = {
   tools: string[];
   process: string[];
   outcome: string;
+  link?: { href: string; label: string };
 };
 
 export const categories: ("All" | WorkCategory)[] = [
@@ -28,6 +30,7 @@ export const categories: ("All" | WorkCategory)[] = [
   "イラスト",
   "アニメーション",
   "研究",
+  "Web/企画",
   "映像/トレーラー"
 ];
 
@@ -329,6 +332,100 @@ export const works: Work[] = [
     ],
     outcome:
       "キャラクターを完成させるまでの判断と作業工程を整理したページです。"
+  },
+  {
+    slug: "tobira-no-mukou-no-shoujo",
+    title: "扉のむこうの少女 Web版",
+    subtitle: "ブラウザで遊べるTRPG入門体験",
+    category: "Web/企画",
+    year: "2026",
+    hero: "/assets/tobira-title.png",
+    images: [
+      "/assets/tobira-title.png",
+      "/assets/tobira-intro-rp.png",
+      "/assets/tobira-intro-safe.png"
+    ],
+    link: {
+      href: "https://tobira-no-mukou-no-shoujo-web.anb14625siraha.workers.dev/",
+      label: "遊んでみる"
+    },
+    excerpt:
+      "ブラウザでワンクリック。「RPって、なに？」から始める、TRPGがはじめての人のための一人用ノベル体験。",
+    concept:
+      "TRPGの最初のハードルである「ロールプレイ」を、“上手に演じる”ことではなく“あなたのまま、物語の中の誰かと言葉を交わす”体験として捉え直した作品です。こわい演出を入れず、所要15〜20分で物語に触れられる入口として設計しました。大学院の修了課題で取り組む「初回体験の設計」を形にしたプロトタイプです。",
+    role: ["企画", "体験設計", "シナリオ・ライティング", "UIデザイン", "実装"],
+    tools: ["Cloudflare Workers", "TypeScript", "生成AI"],
+    process: [
+      "「演じるのが怖い」という不安を分解し、RPって何か→失敗はない→扉の前に立つ、の3ステップ導入を設計",
+      "何を話しても物語が続くよう、相手の応答と「記憶を呼びさます」演出を組み立て",
+      "インストール不要・ワンクリックで遊べるよう、Webアプリとして公開"
+    ],
+    outcome:
+      "はじめての人が、自分の言葉のまま物語に入れる無料のWeb体験として公開しています。"
+  },
+  {
+    slug: "taku-with-coc",
+    title: "Taku with CoC",
+    subtitle: "クトゥルフ神話TRPG 情報ポータル",
+    category: "Web/企画",
+    year: "2026",
+    hero: "/assets/taku-home.png",
+    images: [
+      "/assets/taku-home.png",
+      "/assets/taku-tools.png",
+      "/assets/taku-rp.png",
+      "/assets/taku-ogp.png"
+    ],
+    link: {
+      href: "https://takuwith-coc.com/",
+      label: "サイトを見る"
+    },
+    excerpt:
+      "クトゥルフ神話TRPGの新作・コラボ・イベント・公式情報を一か所に集めた情報ポータルサイト。",
+    concept:
+      "「卓を囲む前の情報集め」を一つにまとめることをテーマに、ニュース・シナリオ・コラボ・イベントを横断して探せる導線を設計しました。プレイヤーがすぐ使えるダイス／判定ツールや、はじめての人向けの案内も同じ場所にまとめています。",
+    role: ["企画", "情報設計", "UIデザイン", "編集・運用", "実装"],
+    tools: ["Next.js", "microCMS", "Vercel", "TypeScript"],
+    process: [
+      "知りたい情報(新作・コラボ・イベント・公式)を整理し、トップのクイックアクセスとして再構成",
+      "更新が続く情報サイトとして、記事をCMSで管理し公開までの運用フローを構築",
+      "ダイス判定ツールやRP入門ページなど、来訪者がその場で使える機能を実装"
+    ],
+    outcome:
+      "本番公開し、クトゥルフ神話TRPGの情報を継続的に届ける拠点として運用しています。"
+  },
+  {
+    slug: "booth-motion-assets",
+    title: "TRPG向け 動く演出素材",
+    subtitle: "背景・カットイン・エフェクト素材集",
+    category: "映像/トレーラー",
+    year: "2026",
+    hero: "/assets/booth-pack-cover.png",
+    images: [
+      "/assets/booth-pack-cover.png",
+      "/assets/booth-pack-all192.png",
+      "/assets/booth-bg-weather.png",
+      "/assets/booth-cutin.png",
+      "/assets/booth-vfx-grid.png",
+      "/assets/booth-vfx-beforeafter.png"
+    ],
+    link: {
+      href: "https://kasokatsumata.booth.pm/",
+      label: "BOOTHで見る"
+    },
+    excerpt:
+      "オンラインセッション(ココフォリア等)で使う、動く背景・カットイン・戦闘エフェクトなどの演出素材。",
+    concept:
+      "セッション画面に“動き”を足して、その場の空気を作る演出素材です。全画面の天候背景、判定を盛り上げるカットイン、魔法・戦闘のエフェクトまで、用途別にまとめたパックとして制作しています。",
+    role: ["演出素材制作", "モーション", "画面設計", "パッケージング"],
+    tools: ["After Effects", "Photoshop", "Python(自動生成)", "CLIP STUDIO PAINT"],
+    process: [
+      "セッションで欲しくなる場面(天候・登場・戦闘・感情)を洗い出し、ジャンル別に素材を設計",
+      "発光や合成を作り込み、ループしても破綻しない“本物の光”の見え方に調整",
+      "オンラインセッションツールで使いやすいよう、軽量化して配布形式に整理"
+    ],
+    outcome:
+      "9カテゴリ・全192種を含む複数のパックとしてまとめ、BOOTHで頒布しています。"
   }
 ];
 

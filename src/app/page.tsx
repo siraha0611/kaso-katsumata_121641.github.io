@@ -65,7 +65,7 @@ export default function Home() {
             <span>Projects</span>
           </div>
           <div>
-            <strong>5</strong>
+            <strong>6</strong>
             <span>Categories</span>
           </div>
           <div>

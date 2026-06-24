@@ -43,6 +43,13 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
             <span>{work.year}</span>
             <span>{work.tools.join(" / ")}</span>
           </div>
+          {work.link ? (
+            <p className="detail-actions">
+              <a className="button primary" href={work.link.href} target="_blank" rel="noreferrer">
+                {work.link.label} →
+              </a>
+            </p>
+          ) : null}
         </div>
         <div className="detail-visual">
           <Image src={assetPath(thumbnailPath(work.hero))} alt={work.title} fill priority sizes="(max-width: 900px) 100vw, 50vw" />

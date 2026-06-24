@@ -498,6 +498,10 @@ a {
   line-height: 1.8;
 }
 
+.detail-actions {
+  margin: 22px 0 0;
+}
+
 .detail-visual {
   min-height: 440px;
 }
