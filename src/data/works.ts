@@ -190,32 +190,6 @@ export const works: Work[] = [
       "複数の世界観に合わせて、キャラクター性の異なる立ち絵を継続的に制作しています。"
   },
   {
-    slug: "standing-commission",
-    title: "立ち絵依頼制作",
-    subtitle: "ヒアリングから納品まで",
-    category: "イラスト",
-    year: "2026",
-    hero: "/assets/standing-commission.png",
-    images: [
-      "/assets/standing-commission.png",
-      "/assets/commission-chiri.png",
-      "/assets/commission-amano.png"
-    ],
-    excerpt:
-      "依頼内容に合わせて制作したTRPG立ち絵。ラフ確認、清書、差分整理まで対応。",
-    concept:
-      "依頼者のキャラクター解釈を優先しながら、セッション画面で使いやすい見え方に整えています。",
-    role: ["ヒアリング", "ラフ", "清書", "差分作成", "納品データ整理"],
-    tools: ["CLIP STUDIO PAINT", "Photoshop"],
-    process: [
-      "依頼内容から性格、衣装、色、ポーズの方向性を整理",
-      "ラフ段階で大きな印象を確認",
-      "用途に合わせて透過PNGや確認用画像を用意"
-    ],
-    outcome:
-      "キャラクターの魅力と実際の使用場面を両立した立ち絵制作です。"
-  },
-  {
     slug: "core-animation",
     title: "-CORE-",
     subtitle: "卒業制作アニメーション ／ 卒業制作展 最優秀賞",
@@ -282,7 +256,7 @@ export const works: Work[] = [
   {
     slug: "commission-works",
     title: "お依頼いただいたお仕事",
-    subtitle: "ご依頼で制作した立ち絵",
+    subtitle: "立ち絵のご依頼制作 ― ヒアリングから納品まで",
     category: "イラスト",
     year: "2026",
     hero: "/assets/commission-work-1-chiri.png",
@@ -291,13 +265,16 @@ export const works: Work[] = [
       "/assets/commission-work-2-amano.png",
       "/assets/commission-work-3-rinno.png",
       "/assets/commission-work-4-seitero1.png",
-      "/assets/commission-work-5-seitero2.png"
+      "/assets/commission-work-5-seitero2.png",
+      "/assets/standing-commission.png",
+      "/assets/commission-chiri.png",
+      "/assets/commission-amano.png"
     ],
     excerpt:
-      "ご依頼を受けて制作した立ち絵のお仕事です。ヒアリングから清書・差分・納品まで対応しています。",
+      "ご依頼を受けて制作した立ち絵のお仕事です。ヒアリング・ラフ確認から清書・差分整理・納品まで対応しています。",
     concept:
-      "依頼者のキャラクター像を第一に、衣装・表情・ポーズを一点ずつ調整して制作しています。セッション画面でも見やすいよう仕上げ、用途に合わせたデータでお渡ししています。",
-    role: ["ヒアリング", "立ち絵制作", "清書", "差分作成", "納品データ整理"],
+      "依頼者のキャラクター像を第一に、衣装・表情・ポーズを一点ずつ調整して制作しています。ラフ段階で大きな印象をすり合わせ、セッション画面でも見やすい形に整えて、用途に合わせたデータでお渡ししています。",
+    role: ["ヒアリング", "ラフ", "立ち絵制作", "清書", "差分作成", "納品データ整理"],
     tools: ["CLIP STUDIO PAINT", "Photoshop"],
     process: [
       "ご依頼内容からキャラクターの性格・衣装・色・ポーズを整理",
