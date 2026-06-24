@@ -8,6 +8,7 @@ const navItems = [
   { href: "/animation-process", label: "Process" },
   { href: "/research", label: "Research" },
   { href: "/about", label: "About" },
+  { href: "/story", label: "Story" },
   { href: "/contact", label: "Contact" }
 ];
 
