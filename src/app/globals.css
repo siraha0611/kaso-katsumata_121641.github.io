@@ -1116,3 +1116,82 @@ a {
   color: var(--rose-dark);
   font-size: 12px;
 }
+
+/* 生成AI 利用についての注意書き */
+.ai-note {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  padding: clamp(20px, 4vw, 36px);
+}
+
+.ai-note h2 {
+  margin: 0 0 6px;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 600;
+}
+
+.ai-note-intro {
+  margin: 0 0 22px;
+  color: var(--smoke);
+  font-size: 14px;
+}
+
+.ai-note-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ai-note-col {
+  border-top: 3px solid var(--line);
+  padding-top: 14px;
+}
+
+.ai-note-yes {
+  border-top-color: var(--gold);
+}
+
+.ai-note-no {
+  border-top-color: var(--rose-dark);
+}
+
+.ai-note-label {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.ai-note-yes .ai-note-label {
+  color: #9a7b2e;
+}
+
+.ai-note-no .ai-note-label {
+  color: var(--rose-dark);
+}
+
+.ai-note-col ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.ai-note-col li {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ai-note-foot {
+  margin: 12px 0 0;
+  color: var(--smoke);
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .ai-note-cols {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

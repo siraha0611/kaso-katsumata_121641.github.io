@@ -80,6 +80,31 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="ai-note">
+          <h2>生成AIの利用について</h2>
+          <p className="ai-note-intro">作るものによって、生成AIの使い方を分けています。</p>
+          <div className="ai-note-cols">
+            <div className="ai-note-col ai-note-yes">
+              <p className="ai-note-label">生成AIを活用</p>
+              <ul>
+                <li>Webサイト・ツールのコーディング／構築（本サイト・Taku with CoC・扉のむこうの少女 など）</li>
+                <li>演出素材の生成・量産（背景・エフェクトなど）</li>
+                <li>制作の自動化・情報整理</li>
+              </ul>
+            </div>
+            <div className="ai-note-col ai-note-no">
+              <p className="ai-note-label">生成AIは不使用</p>
+              <ul>
+                <li>2Dイラスト・立ち絵・キャラクターデザイン</li>
+                <li>アニメーションの作画</li>
+              </ul>
+              <p className="ai-note-foot">イラスト・作画は、すべて自分の手で描いています。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <SectionTitle
           eyebrow="Selected Works"
           title="作品"
