@@ -251,34 +251,6 @@ export const works: Work[] = [
       "キャラクターと世界観を立てた上で、映像として動かすところまで制作した総合的なアニメーション作品です。"
   },
   {
-    slug: "core-lo-cell",
-    title: "CORE LO / セル作業",
-    subtitle: "カット単位の動きと画面設計",
-    category: "アニメーション",
-    year: "2024",
-    hero: "/assets/core-shot-081.png",
-    images: [
-      "/assets/core-shot-081.png",
-      "/assets/core-shot-041.png",
-      "/assets/core-yato-turnaround.png",
-      "/assets/core-imageboard.jpg"
-    ],
-    video: "/assets/core-cell-c028.mp4",
-    excerpt:
-      "アニメーション制作のLO、セル、撮影前後の素材。画面構成と動きの検証を中心にまとめています。",
-    concept:
-      "カットの目的が伝わる構図、視線誘導、アクションのタイミングを優先して画面を組んでいます。",
-    role: ["LO", "セル", "作画", "カット設計", "撮影素材整理"],
-    tools: ["CLIP STUDIO PAINT", "After Effects"],
-    process: [
-      "カットごとに見せたい動作と情報を決定",
-      "ラフからLOへ進め、画面内の奥行きと動線を調整",
-      "セル素材として映像に組み込みやすい形に整理"
-    ],
-    outcome:
-      "完成映像だけでなく、カット制作の考え方と工程を見せるページです。"
-  },
-  {
     slug: "research-and-maps",
     title: "MAP / 情報設計",
     subtitle: "遊びやすさを支える資料制作",
@@ -306,33 +278,32 @@ export const works: Work[] = [
       "物語を進めるための情報を、読みやすく雰囲気のある画面素材に落とし込みました。"
   },
   {
-    slug: "illustration-process",
-    title: "イラスト制作工程",
-    subtitle: "ラフから完成まで",
+    slug: "commission-works",
+    title: "お依頼いただいたお仕事",
+    subtitle: "ご依頼で制作した立ち絵",
     category: "イラスト",
     year: "2026",
-    hero: "/assets/illustration-process.png",
+    hero: "/assets/commission-work-1-chiri.png",
     images: [
-      "/assets/illustration-process.png",
-      "/assets/standing-commission.png",
-      "/assets/stand-komori.png",
-      "/assets/stand-renka-display.png",
-      "/assets/coc-kuga.png",
-      "/assets/coc-adamant.png"
+      "/assets/commission-work-1-chiri.png",
+      "/assets/commission-work-2-amano.png",
+      "/assets/commission-work-3-rinno.png",
+      "/assets/commission-work-4-seitero1.png",
+      "/assets/commission-work-5-seitero2.png"
     ],
     excerpt:
-      "ラフ、線画、塗り、仕上げまでの工程を見せる制作ページ。",
+      "ご依頼を受けて制作した立ち絵のお仕事です。ヒアリングから清書・差分・納品まで対応しています。",
     concept:
-      "完成絵だけでなく、どの段階で形・色・情報量を決めているかが分かるようにまとめています。",
-    role: ["ラフ", "線画", "塗り", "仕上げ"],
+      "依頼者のキャラクター像を第一に、衣装・表情・ポーズを一点ずつ調整して制作しています。セッション画面でも見やすいよう仕上げ、用途に合わせたデータでお渡ししています。",
+    role: ["ヒアリング", "立ち絵制作", "清書", "差分作成", "納品データ整理"],
     tools: ["CLIP STUDIO PAINT", "Photoshop"],
     process: [
-      "ラフでポーズとシルエットを決定",
-      "線画と下塗りで視認性を確認",
-      "光、影、装飾、文字入れで完成度を上げる"
+      "ご依頼内容からキャラクターの性格・衣装・色・ポーズを整理",
+      "ラフで方向性をすり合わせ、清書・差分まで制作",
+      "用途に合わせた形式(透過PNG・確認用画像など)で納品"
     ],
     outcome:
-      "キャラクターを完成させるまでの判断と作業工程を整理したページです。"
+      "複数のご依頼を制作し、キャラクターの魅力と実際の使用場面を両立した立ち絵をお届けしています。"
   },
   {
     slug: "tobira-no-mukou-no-shoujo",
