@@ -103,6 +103,8 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
         </article>
       </section>
 
+      {work.galleryNote ? <p className="gallery-note">{work.galleryNote}</p> : null}
+
       <section className="gallery">
         {work.images.map((image, index) => (
           <a className="gallery-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>

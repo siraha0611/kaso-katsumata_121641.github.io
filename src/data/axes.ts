@@ -22,7 +22,6 @@ export const axes: Axis[] = [
     ],
     works: [
       { title: "夢語りはティータイムのあとで", slug: "yumegatari-teatime" },
-      { title: "夢ティ NPC立ち絵", slug: "yumegatari-npc" },
       { title: "MAP / 情報設計", slug: "research-and-maps" }
     ],
     image: "/assets/yumegatari-title.png"

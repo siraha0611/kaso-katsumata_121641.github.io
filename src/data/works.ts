@@ -14,6 +14,7 @@ export type Work = {
   year: string;
   hero: string;
   images: string[];
+  galleryNote?: string;
   video?: string;
   youtube?: string;
   excerpt: string;
@@ -49,14 +50,23 @@ export const works: Work[] = [
       "/assets/yumegatari-display-3.png",
       "/assets/yumegatari-display-4.png",
       "/assets/yumegatari-still-toru.png",
+      "/assets/yumegatari-toru.png",
+      "/assets/yumeti-komori-normal.png",
+      "/assets/yumeti-komori-smile.png",
+      "/assets/yumegatari-momoka.png",
+      "/assets/yumegatari-haragrim.png",
+      "/assets/yumegatari-lulu-human.png",
+      "/assets/yumegatari-lulu-cat.png",
+      "/assets/yumegatari-haon.png",
       "/assets/dreamland-map.png",
       "/assets/celephais-map.png",
       "/assets/astrea-menu.png"
     ],
+    galleryNote: "※一部キャラクターのネタバレを含みます",
     excerpt:
-      "喫茶店を入口に夢の世界へ進むTRPGシナリオ。ロゴ、頒布画像、NPC、MAP、セッション素材まで制作。",
+      "喫茶店を入口に夢の世界へ進むTRPGシナリオ。ロゴ、頒布画像、NPC立ち絵、MAP、セッション素材まで制作。",
     concept:
-      "日常の喫茶店から異世界の夢へ移る導線を、紅茶の色、白いロゴ、手書きの線、幻想的な地図表現でまとめた作品です。",
+      "日常の喫茶店から異世界の夢へ移る導線を、紅茶の色、白いロゴ、手書きの線、幻想的な地図表現でまとめた作品です。喫茶店の住人から夢の世界の存在まで、NPCの立ち絵も役割と関係性が伝わるように制作しています。",
     role: ["シナリオ", "ロゴ", "頒布画像", "NPC立ち絵", "MAP", "セッション素材"],
     tools: ["CLIP STUDIO PAINT", "Photoshop", "Illustrator"],
     process: [
@@ -66,37 +76,6 @@ export const works: Work[] = [
     ],
     outcome:
       "シナリオ本文だけでなく、作品の入口からプレイ中の画面まで一貫して世界観を組み立てました。"
-  },
-  {
-    slug: "yumegatari-npc",
-    title: "夢ティ NPC立ち絵",
-    subtitle: "喫茶アストレアと夢の住人たち",
-    category: "イラスト",
-    year: "2026",
-    hero: "/assets/yumegatari-toru.png",
-    images: [
-      "/assets/yumegatari-toru.png",
-      "/assets/yumeti-komori-normal.png",
-      "/assets/yumeti-komori-smile.png",
-      "/assets/yumegatari-momoka.png",
-      "/assets/yumegatari-haragrim.png",
-      "/assets/yumegatari-lulu-human.png",
-      "/assets/yumegatari-lulu-cat.png",
-      "/assets/yumegatari-haon.png"
-    ],
-    excerpt:
-      "『夢語りはティータイムのあとで』に登場するNPC立ち絵群。役割と関係性が伝わるように制作。",
-    concept:
-      "喫茶店の落ち着いた人物と、夢の世界に属する人物を分けながら、同じ作品内に並んだ時の統一感を保っています。",
-    role: ["キャラクター制作", "立ち絵", "表情差分", "衣装設計"],
-    tools: ["CLIP STUDIO PAINT"],
-    process: [
-      "NPCの役割、立場、登場タイミングからシルエットを検討",
-      "通常時とイベント時で印象が変わるキャラクターは差分を制作",
-      "セッション画面で見やすい色面と輪郭を調整"
-    ],
-    outcome:
-      "物語進行に合わせて印象が変化するNPCを、立ち絵と差分で表現しました。"
   },
   {
     slug: "standing-archive",

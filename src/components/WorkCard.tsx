@@ -21,6 +21,7 @@ export function WorkCard({ work, priority = false }: WorkCardProps) {
         </div>
         <h3>{work.title}</h3>
         <p>{work.excerpt}</p>
+        {work.galleryNote ? <p className="work-card-note">{work.galleryNote}</p> : null}
       </div>
     </Link>
   );
