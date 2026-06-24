@@ -51,9 +51,6 @@ export const galleryImages = [
   "/assets/hdd-rio-normal.png",
   "/assets/hdd-rio-part2.png",
   "/assets/hdd-tamemaru.png",
-  "/assets/hdd-zarame.png",
-  "/assets/hdd-kagerou.png",
-  "/assets/hdd-togeko.png",
   "/assets/hdd-renka-hanabie.png",
   "/assets/hdd-sayo.png",
   "/assets/hdd-satoshi.png",
@@ -69,8 +66,7 @@ export const galleryImages = [
   "/assets/hdd-shiraha-smile.png",
   "/assets/hdd-toraiwa.png",
   "/assets/hdd-hino.png",
-  "/assets/hdd-hetamite.png",
-  "/assets/hdd-sugitani.png"
+  "/assets/hdd-hetamite.png"
 ];
 
 export const publishedItems = [
