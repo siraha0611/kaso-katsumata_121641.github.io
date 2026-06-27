@@ -16,8 +16,12 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: WorkDetailPageProps) {
   const work = getWork(params.slug);
+  if (!work) {
+    return { title: "Work" };
+  }
   return {
-    title: work ? `${work.title} | Katsumata Sota Portfolio` : "Work"
+    title: work.title,
+    description: work.excerpt
   };
 }
 

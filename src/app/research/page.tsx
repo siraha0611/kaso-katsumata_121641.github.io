@@ -2,7 +2,9 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 
 export const metadata = {
-  title: "修了課題研究 | Katsumata Sota Portfolio"
+  title: "研究",
+  description:
+    "現実科学の視点から、TRPGで“現実とは何か”を問う研究。デジタルハリウッド大学・藤井直敬学長のもとで、TRPGの初回体験と動線設計に取り組んでいます。"
 };
 
 const notes = [
@@ -38,31 +40,67 @@ const notes = [
   }
 ];
 
+const labLinks = [
+  {
+    title: "現実科学ラボ（Reality Science Lab）",
+    desc: "藤井直敬研究室 × ハコスコのジョイントラボ。",
+    href: "https://reality-science.com/"
+  },
+  {
+    title: "藤井 直敬 学長（デジタルハリウッド大学）",
+    desc: "学長・卓越教授／脳科学者。現実科学の提唱者。",
+    href: "https://gs.dhw.ac.jp/faculty/dedicated/naotaka-fujii"
+  },
+  {
+    title: "「現実科学とは」― 藤井直敬",
+    desc: "現実科学という考え方の入口（note）。",
+    href: "https://note.com/naotakafujii/n/n529845fc437e"
+  }
+];
+
 export default function ResearchPage() {
   return (
     <main className="page-shell">
       <SectionTitle
         as="h1"
         eyebrow="Research"
-        title="修了課題研究"
-        description="TRPGの“最初の一歩”を、やさしくするための研究。"
+        title="研究"
+        description="現実科学の視点から、TRPGで“現実とは何か”を問う。"
       />
 
       <section className="section compact">
+        <SectionTitle eyebrow="Lab" title="現実科学とTRPG" />
         <div className="about-copy">
           <p>
-            大学院の修了課題として、「TRPGの初回体験と、そこへたどり着くまでの動線」をテーマに研究しています。
-            TRPGはとても面白い遊びですが、はじめての人にとっては、ルール・準備・場の空気など、入口のハードルが高い。
-            その“最初の一歩”を、どう設計すればやさしく届けられるかを探っています。
+            デジタルハリウッド大学大学院で、学長・藤井直敬先生のもとで研究を進めています。
+            テーマは、藤井先生が提唱する「現実科学」。私はそこにTRPGを持ち込み、研究を行っています。
           </p>
+          <p>
+            空想のなかで複数の人のあいだに立ち上がる「共同幻想」は、現実に介入するひとつの手段ではないか――
+            そう考えています。TRPGという、みんなで一つの物語を立ち上げる遊びを通じて、「現実とは何か」を
+            あらためて考えるきっかけをつくりたい。それが私の研究の出発点です。
+          </p>
+        </div>
+        <div className="link-grid contact-links">
+          {labLinks.map((item) => (
+            <Link key={item.href} href={item.href} target="_blank" rel="noreferrer">
+              <span>{item.title}</span>
+              <small>{item.desc}</small>
+            </Link>
+          ))}
         </div>
       </section>
 
       <section className="section compact">
-        <SectionTitle eyebrow="Approach" title="入口から初回体験までを、地続きに" />
+        <SectionTitle eyebrow="Capstone" title="はじめの一歩を、やさしくする" />
         <div className="about-copy">
           <p>
-            「知る」から「遊ぶ」までを途切れさせないために、ふたつの制作物を“入口”と“背骨”として設計しています。
+            その問いを、まずは「入口」から実践しています。修了課題のテーマは、「TRPGの初回体験と、そこへ
+            たどり着くまでの動線」。TRPGはとても面白い遊びですが、はじめての人には、ルール・準備・場の空気など、
+            入口のハードルが高い。その“最初の一歩”を、どう設計すればやさしく届けられるかを探っています。
+          </p>
+          <p>
+            「知る」から「遊ぶ」までを途切れさせないために、ふたつの制作物を“入口”と“背骨”として設計しました。
             散らばった情報をひとつの入口にまとめ、そこからブラウザでそのまま「はじめての体験」に踏み出せる――
             この一連の流れそのものを、研究の対象にしています。
           </p>

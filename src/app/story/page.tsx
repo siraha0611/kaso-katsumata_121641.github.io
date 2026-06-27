@@ -1,7 +1,8 @@
 import { SectionTitle } from "@/components/SectionTitle";
 
 export const metadata = {
-  title: "生い立ち | Katsumata Sota Portfolio"
+  title: "生い立ち",
+  description: "勝俣颯太の生い立ち。子ども時代の創作から、アニメーション、TRPG、大学院での研究まで。"
 };
 
 const chapters = [

@@ -22,8 +22,8 @@ export default function Home() {
             <Link className="button primary" href="/works">
               Worksを見る
             </Link>
-            <Link className="button" href="/about">
-              About
+            <Link className="button" href="/portfolio-katsumata-sota.pdf" target="_blank" rel="noreferrer">
+              ポートフォリオPDF
             </Link>
             <Link className="button" href="/contact">
               Links / Contact
@@ -76,6 +76,24 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="Research"
+          title="研究室での取り組み"
+          description="現実科学の視点から、TRPGで“現実とは何か”を問う。"
+        />
+        <div className="research-teaser">
+          <p>
+            デジタルハリウッド大学大学院で、学長・藤井直敬先生のもとで研究しています。テーマは「現実科学」。
+            空想のなかで立ち上がる“共同幻想”は、現実に介入するひとつの手段ではないか――
+            TRPGを通じて「現実とは何か」を考えるきっかけをつくっています。
+          </p>
+          <Link className="button" href="/research">
+            研究の詳細を見る →
+          </Link>
         </div>
       </section>
 
