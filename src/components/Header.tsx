@@ -5,7 +5,6 @@ const navItems = [
   { href: "/works", label: "Works" },
   { href: "/gallery", label: "Gallery" },
   { href: "/published", label: "Published" },
-  { href: "/animation-process", label: "Process" },
   { href: "/research", label: "Research" },
   { href: "/about", label: "About" },
   { href: "/story", label: "Story" },

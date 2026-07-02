@@ -2,9 +2,21 @@ export type WorkCategory =
   | "TRPGシナリオ"
   | "イラスト"
   | "アニメーション"
-  | "研究"
   | "Web/企画"
   | "映像/トレーラー";
+
+export type WorkLink = { href: string; label: string };
+
+export type WorkflowStep = {
+  title: string;
+  text: string;
+  image: string;
+};
+
+export type WorkSection = {
+  title: string;
+  body: string[];
+};
 
 export type Work = {
   slug: string;
@@ -21,9 +33,11 @@ export type Work = {
   concept: string;
   role: string[];
   tools: string[];
-  process: string[];
+  process?: string[];
+  workflow?: WorkflowStep[];
+  sections?: WorkSection[];
   outcome: string;
-  link?: { href: string; label: string };
+  links?: WorkLink[];
 };
 
 export const categories: ("All" | WorkCategory)[] = [
@@ -31,7 +45,6 @@ export const categories: ("All" | WorkCategory)[] = [
   "TRPGシナリオ",
   "イラスト",
   "アニメーション",
-  "研究",
   "Web/企画",
   "映像/トレーラー"
 ];
@@ -64,18 +77,65 @@ export const works: Work[] = [
     ],
     galleryNote: "※一部キャラクターのネタバレを含みます",
     excerpt:
-      "喫茶店を入口に夢の世界へ進むTRPGシナリオ。ロゴ、頒布画像、NPC立ち絵、MAP、セッション素材まで制作。",
+      "喫茶店を入口に夢の世界へ進む長編キャンペーンシナリオ。本文200ページ超・プレイ時間約30時間。シナリオからロゴ・NPC立ち絵・MAP・セッション素材まで一人で制作。",
     concept:
-      "日常の喫茶店から異世界の夢へ移る導線を、紅茶の色、白いロゴ、手書きの線、幻想的な地図表現でまとめた作品です。喫茶店の住人から夢の世界の存在まで、NPCの立ち絵も役割と関係性が伝わるように制作しています。",
-    role: ["シナリオ", "ロゴ", "頒布画像", "NPC立ち絵", "MAP", "セッション素材"],
-    tools: ["CLIP STUDIO PAINT", "Photoshop", "Illustrator"],
-    process: [
-      "タイトルロゴとキービジュアルで作品の第一印象を設計",
-      "喫茶店、夢、探索、戦闘の各場面に必要な視覚素材を整理",
-      "頒布画像とセッション用素材を分け、閲覧用と実使用の両方に対応"
+      "現代の喫茶店「喫茶アストレア」の店員たちが、夢の世界ドリームランドへ――日常から夢へ移る導線を、紅茶の色、白いロゴ、手描きの線、幻想的な地図表現でまとめた全4章のキャンペーンシナリオです。4人のプレイヤーそれぞれに秘匿ハンドアウトを用意し、情報の非対称性が物語を動かします。喫茶店の住人から夢の世界の存在まで、NPCの立ち絵はすべて手描きで、役割と関係性が伝わるように制作しています。",
+    role: ["シナリオ執筆", "ロゴ", "NPC立ち絵", "MAP・情報設計", "頒布画像", "セッション素材"],
+    tools: ["CLIP STUDIO PAINT", "Photoshop", "Illustrator", "生成AI(資料整理・校正)"],
+    workflow: [
+      {
+        title: "コンセプト設計",
+        text: "AIは使わず、「喫茶店から始まり、夢の世界へ渡る物語を」という個人のビジョンから出発。タイトルロゴとキービジュアルで作品の第一印象を固めました。",
+        image: "/assets/yumegatari-title.png"
+      },
+      {
+        title: "世界観調査・資料整理",
+        text: "舞台となる夢の世界の原典資料の整理にAIを活用。原典と照合しながら、旅の経路や土地の関係を固めていきました。",
+        image: "/assets/dreamland-map.png"
+      },
+      {
+        title: "構造設計",
+        text: "全4章の構成と4人分の秘匿ハンドアウトを設計。ハンドアウト間の情報矛盾がないかの確認に、限定的にAIを使っています。",
+        image: "/assets/celephais-map.png"
+      },
+      {
+        title: "本文執筆・ビジュアル制作",
+        text: "物語の核となる本文は自分の言葉で執筆。NPCの立ち絵とスチルはすべて手描きで、200ページ超の本文とあわせて作り込みました。",
+        image: "/assets/yumegatari-toru.png"
+      },
+      {
+        title: "校正・仕上げ",
+        text: "誤字脱字や表記ゆれの検出にAIを活用（章をまたいだ旧字・新字の混在検出など）。頒布画像とセッション用素材を整えて公開しました。",
+        image: "/assets/yumegatari-display-2.png"
+      }
+    ],
+    sections: [
+      {
+        title: "MAP・情報設計",
+        body: [
+          "約30時間の長編を迷わず遊べるよう、プレイヤーが参照する情報と、進行側が扱う情報を分けて資料を設計しています。夢の世界全体の旅MAP、都市の市街図、喫茶アストレアのメニュー表など、探索範囲・イベント・移動経路を視覚化し、セッション中の視認性を確認しながら調整しました。"
+        ]
+      },
+      {
+        title: "AIとの分業",
+        body: [
+          "制作期間は大学院と並行して約8ヶ月。資料整理・矛盾チェック・校正はAIに任せ、物語の核となる文章とキャラクターの立ち絵・スチルはすべて自分の手で作っています。制作の裏側と分業の考え方は、noteの2記事で公開しています。"
+        ]
+      }
     ],
     outcome:
-      "シナリオ本文だけでなく、作品の入口からプレイ中の画面まで一貫して世界観を組み立てました。"
+      "BOOTHで頒布中。シナリオ本文だけでなく、作品の入口からプレイ中の画面まで、一人で一貫して世界観を組み立てました。",
+    links: [
+      { href: "https://booth.pm/ja/items/8045336", label: "BOOTHで見る" },
+      {
+        href: "https://note.com/061112160922/n/n210c3a54dc48",
+        label: "note: AIで作ってみた話（実録）"
+      },
+      {
+        href: "https://note.com/061112160922/n/n0d365796f563",
+        label: "note: AIワークフロー執筆編"
+      }
+    ]
   },
   {
     slug: "standing-archive",
@@ -171,7 +231,7 @@ export const works: Work[] = [
   {
     slug: "core-animation",
     title: "-CORE-",
-    subtitle: "卒業制作アニメーション ／ 卒業制作展 アニメ制作ゼミ最優秀賞",
+    subtitle: "卒業制作アニメーション ／ 2025年度卒業制作展 アニメ制作ゼミ最優秀賞",
     category: "アニメーション",
     year: "2024",
     hero: "/assets/core-flyer-front.png",
@@ -187,50 +247,42 @@ export const works: Work[] = [
       "/assets/research.png"
     ],
     youtube: "https://www.youtube.com/embed/Go7ThQ1DOP4",
-    link: {
-      href: "https://youtu.be/Go7ThQ1DOP4",
-      label: "本編を見る"
-    },
+    links: [
+      {
+        href: "https://youtu.be/Go7ThQ1DOP4",
+        label: "本編を見る"
+      }
+    ],
     excerpt:
-      "和風SFアクションを軸にした卒業制作アニメーション。企画から作画・編集まで手がけ、卒業制作展でアニメ制作ゼミ最優秀賞を受賞しました。",
+      "和風SFアクションを軸にした卒業制作アニメーション。企画から作画・編集まで手がけ、2025年度卒業制作展でアニメ制作ゼミ最優秀賞を受賞しました。",
     concept:
       "義体、刀、赤い空間、都市構造をモチーフに、静かな緊張感と斬撃の瞬間を見せる和風SFアクションとして設計しました。「断ち斬るは己の宿命」――主人公ヤトの覚悟を軸に、世界観・キャラクター・映像を一本に束ねています。",
     role: ["企画・監督", "キャラクターデザイン", "絵コンテ／演出", "背景", "編集"],
     tools: ["CLIP STUDIO PAINT", "After Effects", "Premiere Pro"],
-    process: [
-      "企画書・脚本・キャラクター三面図・世界観イメージで作品の核を固める",
-      "絵コンテとVコンテでカットごとのテンポと画面設計を検証",
-      "LO・作画・背景・撮影・編集を進め、一本の映像作品として完成"
+    workflow: [
+      {
+        title: "企画・世界観",
+        text: "企画書・脚本・イメージボードで、作品の舞台、キャラクター、画面の方向性を固める段階。",
+        image: "/assets/core-imageboard.jpg"
+      },
+      {
+        title: "キャラクター設定",
+        text: "三面図や細部設定を作り、作画時に迷わない基準を作成。",
+        image: "/assets/core-yato-turnaround.png"
+      },
+      {
+        title: "作業表・進行管理",
+        text: "世界観、イメージボード、舞台設定など、作業を分けて進行管理。",
+        image: "/assets/core-workflow-world.png"
+      },
+      {
+        title: "Vコンテ・LO・作画",
+        text: "映像のテンポとカット構成を確認しながら動きと画面設計を詰め、作画・背景・撮影・編集で一本の映像に仕上げる。",
+        image: "/assets/core-progress.png"
+      }
     ],
     outcome:
       "約1年半をかけた集大成。2025年度卒業制作展でアニメ制作ゼミ最優秀賞を受賞しました。企画・キャラクター・映像までを一貫して手がけ、音楽は悠ぺぇさんに制作いただいた、仲間との一本です。"
-  },
-  {
-    slug: "research-and-maps",
-    title: "MAP / 情報設計",
-    subtitle: "遊びやすさを支える資料制作",
-    category: "研究",
-    year: "2026",
-    hero: "/assets/dreamland-map.png",
-    images: [
-      "/assets/dreamland-map.png",
-      "/assets/celephais-map.png",
-      "/assets/astrea-menu.png",
-      "/assets/trpg-scenario.png"
-    ],
-    excerpt:
-      "TRPGの進行、舞台理解、探索導線を支えるMAPと資料制作。",
-    concept:
-      "プレイヤーが参照する情報と、進行側が扱う情報を分け、見やすく運用しやすい資料として設計しています。",
-    role: ["MAP", "資料設計", "画面素材", "情報整理"],
-    tools: ["Photoshop", "CLIP STUDIO PAINT", "Excel"],
-    process: [
-      "シナリオ本文から必要な情報を抽出",
-      "探索範囲、イベント、拠点、移動経路を視覚化",
-      "セッション中の視認性を確認しながら調整"
-    ],
-    outcome:
-      "物語を進めるための情報を、読みやすく雰囲気のある画面素材に落とし込みました。"
   },
   {
     slug: "commission-works",
@@ -255,10 +307,22 @@ export const works: Work[] = [
       "依頼者のキャラクター像を第一に、衣装・表情・ポーズを一点ずつ調整して制作しています。ラフ段階で大きな印象をすり合わせ、セッション画面でも見やすい形に整えて、用途に合わせたデータでお渡ししています。",
     role: ["ヒアリング", "ラフ", "立ち絵制作", "清書", "差分作成", "納品データ整理"],
     tools: ["CLIP STUDIO PAINT", "Photoshop"],
-    process: [
-      "ご依頼内容からキャラクターの性格・衣装・色・ポーズを整理",
-      "ラフで方向性をすり合わせ、清書・差分まで制作",
-      "用途に合わせた形式(透過PNG・確認用画像など)で納品"
+    workflow: [
+      {
+        title: "ヒアリング・ラフ",
+        text: "ご依頼内容からキャラクターの性格・衣装・色・ポーズを整理し、ラフの段階で大きな印象をすり合わせます。",
+        image: "/assets/commission-rinno-rough.jpg"
+      },
+      {
+        title: "線画",
+        text: "確定したラフをもとに線画を起こし、髪や装飾の流れ、シルエットの見え方を整えます。",
+        image: "/assets/commission-rinno-line.jpg"
+      },
+      {
+        title: "仕上げ・納品",
+        text: "着彩・清書と差分を制作し、用途に合わせた形式(透過PNG・確認用画像など)で納品します。",
+        image: "/assets/commission-rinno-finish.png"
+      }
     ],
     outcome:
       "複数のご依頼を制作し、キャラクターの魅力と実際の使用場面を両立した立ち絵をお届けしています。"
@@ -275,10 +339,12 @@ export const works: Work[] = [
       "/assets/tobira-intro-rp.png",
       "/assets/tobira-intro-safe.png"
     ],
-    link: {
-      href: "https://tobira-no-mukou-no-shoujo-web.anb14625siraha.workers.dev/",
-      label: "遊んでみる"
-    },
+    links: [
+      {
+        href: "https://tobira-no-mukou-no-shoujo-web.anb14625siraha.workers.dev/",
+        label: "遊んでみる"
+      }
+    ],
     excerpt:
       "ブラウザでワンクリック。「RPって、なに？」から始める、TRPGがはじめての人のための一人用ノベル体験。",
     concept:
@@ -306,10 +372,12 @@ export const works: Work[] = [
       "/assets/taku-slide-3.png",
       "/assets/taku-slide-4.png"
     ],
-    link: {
-      href: "https://takuwith-coc.com/",
-      label: "サイトを見る"
-    },
+    links: [
+      {
+        href: "https://takuwith-coc.com/",
+        label: "サイトを見る"
+      }
+    ],
     excerpt:
       "散らばったクトゥルフ神話TRPG(CoC)の情報を、ひとつの入口に。新作・公式・コラボ・大型イベントを一次ソースつきで集約した情報ポータル。",
     concept:
@@ -339,10 +407,12 @@ export const works: Work[] = [
       "/assets/booth-vfx-grid.png",
       "/assets/booth-vfx-beforeafter.png"
     ],
-    link: {
-      href: "https://kasokatsumata.booth.pm/",
-      label: "BOOTHで見る"
-    },
+    links: [
+      {
+        href: "https://kasokatsumata.booth.pm/",
+        label: "BOOTHで見る"
+      }
+    ],
     excerpt:
       "オンラインセッション(ココフォリア等)で使う、動く背景・カットイン・戦闘エフェクトなどの演出素材。",
     concept:

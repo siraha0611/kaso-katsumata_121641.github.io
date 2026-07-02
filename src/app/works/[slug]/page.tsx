@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { SectionTitle } from "@/components/SectionTitle";
 import { getWork, works } from "@/data/works";
 import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
@@ -47,11 +48,19 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
             <span>{work.year}</span>
             <span>{work.tools.join(" / ")}</span>
           </div>
-          {work.link ? (
+          {work.links?.length ? (
             <p className="detail-actions">
-              <a className="button primary" href={work.link.href} target="_blank" rel="noreferrer">
-                {work.link.label} →
-              </a>
+              {work.links.map((link, index) => (
+                <a
+                  className={index === 0 ? "button primary" : "button"}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={link.href}
+                >
+                  {link.label} →
+                </a>
+              ))}
             </p>
           ) : null}
         </div>
@@ -93,19 +102,54 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
             ))}
           </ul>
         </article>
-        <article>
-          <h2>Process</h2>
-          <ol>
-            {work.process.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ol>
-        </article>
+        {work.process ? (
+          <article>
+            <h2>Process</h2>
+            <ol>
+              {work.process.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ol>
+          </article>
+        ) : null}
         <article>
           <h2>Outcome</h2>
           <p>{work.outcome}</p>
         </article>
+        {work.sections?.map((section) => (
+          <article key={section.title}>
+            <h2>{section.title}</h2>
+            {section.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </article>
+        ))}
       </section>
+
+      {work.workflow ? (
+        <section className="detail-workflow">
+          <SectionTitle eyebrow="Workflow" title="制作の流れ" />
+          <div className="process-timeline">
+            {work.workflow.map((step, index) => (
+              <article className="process-step" key={step.title}>
+                <div className="process-number">{String(index + 1).padStart(2, "0")}</div>
+                <div className="process-image">
+                  <Image
+                    src={assetPath(thumbnailPath(step.image))}
+                    alt={step.title}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 42vw"
+                  />
+                </div>
+                <div className="process-copy">
+                  <h2>{step.title}</h2>
+                  <p>{step.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {work.galleryNote ? <p className="gallery-note">{work.galleryNote}</p> : null}
 

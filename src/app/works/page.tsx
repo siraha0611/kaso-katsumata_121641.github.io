@@ -9,7 +9,7 @@ export default function WorksPage() {
         as="h1"
         eyebrow="Works"
         title="作品一覧"
-        description="TRPGシナリオ、立ち絵、アニメーション、MAP・資料制作を掲載しています。"
+        description="TRPGシナリオ、立ち絵、アニメーション、Web・演出素材を掲載しています。各作品のページで制作の流れ(ワークフロー)も確認できます。"
       />
       <div className="category-list">
         {categories.map((category) => (

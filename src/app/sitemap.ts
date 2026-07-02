@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/works",
     "/gallery",
     "/published",
-    "/animation-process",
     "/research",
     "/about",
     "/story",

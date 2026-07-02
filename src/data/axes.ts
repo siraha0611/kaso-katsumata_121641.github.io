@@ -21,8 +21,7 @@ export const axes: Axis[] = [
       "『夢語りはティータイムのあとで』では、シナリオ本文だけでなく、ロゴ・NPC・MAP・セッション素材までを“ひとつの体験”として設計しています。いまは12万文字を超える長編をゲームマーケットに向けて制作中。丁寧さを忘れたら面白味が消える――細部の積み重ねが、卓の説得力になると信じています。"
     ],
     works: [
-      { title: "夢語りはティータイムのあとで", slug: "yumegatari-teatime" },
-      { title: "MAP / 情報設計", slug: "research-and-maps" }
+      { title: "夢語りはティータイムのあとで", slug: "yumegatari-teatime" }
     ],
     image: "/assets/yumegatari-title.png"
   },

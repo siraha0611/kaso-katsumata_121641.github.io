@@ -34,6 +34,16 @@ const notes = [
     href: "https://note.com/061112160922/n/nbd7b03331132"
   },
   {
+    title: "CoCTRPGシナリオをAIで作ってみた話（実録）",
+    tag: "AI × TRPG",
+    href: "https://note.com/061112160922/n/n210c3a54dc48"
+  },
+  {
+    title: "クトゥルフシナリオ制作のAIワークフロー執筆編",
+    tag: "AI × TRPG",
+    href: "https://note.com/061112160922/n/n0d365796f563"
+  },
+  {
     title: "DHU 5年の振り返りと2026年に向けて",
     tag: "背景・自分史",
     href: "https://note.com/061112160922/n/na13f99d47478"

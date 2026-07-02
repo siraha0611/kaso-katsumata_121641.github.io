@@ -110,26 +110,3 @@ export const publishedItems = [
     href: "https://www.youtube.com/@KASOkatsumata"
   }
 ];
-
-export const animationProcess = [
-  {
-    title: "企画・世界観",
-    text: "作品の舞台、キャラクター、画面の方向性を決める段階。",
-    image: "/assets/core-imageboard.jpg"
-  },
-  {
-    title: "キャラクター設定",
-    text: "三面図や細部設定を作り、作画時に迷わない基準を作成。",
-    image: "/assets/core-yato-turnaround.png"
-  },
-  {
-    title: "作業表",
-    text: "世界観、イメージボード、舞台設定など、作業を分けて進行管理。",
-    image: "/assets/core-workflow-world.png"
-  },
-  {
-    title: "Vコンテ・LO",
-    text: "映像のテンポとカット構成を確認しながら、動きと画面設計を詰める。",
-    image: "/assets/core-progress.png"
-  }
-];
