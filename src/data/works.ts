@@ -18,6 +18,12 @@ export type WorkSection = {
   body: string[];
 };
 
+export type ShowcaseGroup = {
+  title: string;
+  note?: string;
+  images: string[];
+};
+
 export type Work = {
   slug: string;
   title: string;
@@ -36,6 +42,7 @@ export type Work = {
   process?: string[];
   workflow?: WorkflowStep[];
   sections?: WorkSection[];
+  showcase?: ShowcaseGroup[];
   outcome: string;
   links?: WorkLink[];
 };
@@ -57,25 +64,71 @@ export const works: Work[] = [
     category: "TRPGシナリオ",
     year: "2026",
     hero: "/assets/yumegatari-title.png",
-    images: [
-      "/assets/yumegatari-title.png",
-      "/assets/yumegatari-display-2.png",
-      "/assets/yumegatari-display-3.png",
-      "/assets/yumegatari-display-4.png",
-      "/assets/yumegatari-still-toru.png",
-      "/assets/yumegatari-toru.png",
-      "/assets/yumeti-komori-normal.png",
-      "/assets/yumeti-komori-smile.png",
-      "/assets/yumegatari-momoka.png",
-      "/assets/yumegatari-haragrim.png",
-      "/assets/yumegatari-lulu-human.png",
-      "/assets/yumegatari-lulu-cat.png",
-      "/assets/yumegatari-haon.png",
-      "/assets/dreamland-map.png",
-      "/assets/celephais-map.png",
-      "/assets/astrea-menu.png"
-    ],
+    images: [],
     galleryNote: "※一部キャラクターのネタバレを含みます",
+    showcase: [
+      {
+        title: "頒布ビジュアル・ロゴ",
+        note: "BOOTHの頒布ページで使用しているトレーラー一式とタイトルロゴ。",
+        images: [
+          "/assets/yumegatari-title.png",
+          "/assets/yumegatari-display-2.png",
+          "/assets/yumegatari-display-3.png",
+          "/assets/yumegatari-display-4.png",
+          "/assets/yumegatari-logo-black.png"
+        ]
+      },
+      {
+        title: "NPC立ち絵・スチル",
+        note: "立ち絵・スチルはすべて手描き。※一部キャラクターのネタバレを含みます",
+        images: [
+          "/assets/yumegatari-npc-intro.png",
+          "/assets/yumegatari-still-toru.png",
+          "/assets/yumegatari-toru.png",
+          "/assets/yumeti-komori-normal.png",
+          "/assets/yumeti-komori-smile.png",
+          "/assets/yumegatari-momoka.png",
+          "/assets/yumegatari-haragrim.png",
+          "/assets/yumegatari-lulu-human.png",
+          "/assets/yumegatari-lulu-cat.png",
+          "/assets/yumegatari-haon.png"
+        ]
+      },
+      {
+        title: "MAP・情報設計",
+        note: "同梱資料全10点より。セレファイス市街図は初期稿→完成稿の変遷、籠城戦MAPはPL用とKP用で情報量を出し分けています。",
+        images: [
+          "/assets/dreamland-map.png",
+          "/assets/yumegatari-map-celephais-early.png",
+          "/assets/celephais-map.png",
+          "/assets/yumegatari-map-journey.png",
+          "/assets/yumegatari-map-moon.png",
+          "/assets/yumegatari-map-siege-pl.png",
+          "/assets/yumegatari-map-siege-kp.png",
+          "/assets/astrea-menu.png",
+          "/assets/yumegatari-apron.png"
+        ]
+      },
+      {
+        title: "セッション素材(スクリーンパネル)",
+        note: "戦闘や進行の状況を画面上で伝えるパネル(全8種のうち4種)。",
+        images: [
+          "/assets/yumegatari-panel-round.png",
+          "/assets/yumegatari-panel-action.png",
+          "/assets/yumegatari-panel-knights.png",
+          "/assets/yumegatari-panel-carriage.png"
+        ]
+      },
+      {
+        title: "背景画像",
+        note: "全245枚を章別に制作し、シナリオ順に整理して同梱(画像生成AIを活用)。",
+        images: [
+          "/assets/yumegatari-bg-astrea.png",
+          "/assets/yumegatari-bg-tea.png",
+          "/assets/yumegatari-bg-stairs.png"
+        ]
+      }
+    ],
     excerpt:
       "喫茶店を入口に夢の世界へ進む長編キャンペーンシナリオ。本文200ページ超・プレイ時間約30時間。シナリオからロゴ・NPC立ち絵・MAP・セッション素材まで一人で制作。",
     concept:
@@ -113,18 +166,18 @@ export const works: Work[] = [
       {
         title: "MAP・情報設計",
         body: [
-          "約30時間の長編を迷わず遊べるよう、プレイヤーが参照する情報と、進行側が扱う情報を分けて資料を設計しています。夢の世界全体の旅MAP、都市の市街図、喫茶アストレアのメニュー表など、探索範囲・イベント・移動経路を視覚化し、セッション中の視認性を確認しながら調整しました。"
+          "約30時間の長編を迷わず遊べるよう、プレイヤーが参照する情報と、進行側が扱う情報を分けて資料を設計しています。同じ籠城戦のMAPでもPL用とKP用で書き込む情報量を変え、市街図は初期稿から完成稿へ検証しながら更新。夢の世界全体の旅MAPからメニュー表まで、計10点の資料に落とし込みました。"
         ]
       },
       {
         title: "AIとの分業",
         body: [
-          "制作期間は大学院と並行して約8ヶ月。資料整理・矛盾チェック・校正はAIに任せ、物語の核となる文章とキャラクターの立ち絵・スチルはすべて自分の手で作っています。制作の裏側と分業の考え方は、noteの2記事で公開しています。"
+          "制作期間は大学院と並行して約8ヶ月。背景画像(全245枚)の生成、資料整理・矛盾チェック・校正はAIに任せ、物語の核となる文章とキャラクターの立ち絵・スチルはすべて自分の手で作っています。制作の裏側と分業の考え方は、noteの2記事で公開しています。"
         ]
       }
     ],
     outcome:
-      "BOOTHで頒布中。シナリオ本文だけでなく、作品の入口からプレイ中の画面まで、一人で一貫して世界観を組み立てました。",
+      "BOOTHで頒布中。本文200ページ超に加えて、背景画像245枚・NPC立ち絵・MAP資料10点・スクリーンパネル8種・KP演出用の動く素材8シーンまで、総計400ファイル超の素材セットを一人で一貫して組み立てました。",
     links: [
       { href: "https://booth.pm/ja/items/8045336", label: "BOOTHで見る" },
       {

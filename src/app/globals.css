@@ -599,6 +599,25 @@ a {
   margin-top: 44px;
 }
 
+.showcase {
+  margin-top: 44px;
+}
+
+.showcase-group {
+  margin-top: 36px;
+}
+
+.showcase-group > h2 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.showcase-group .gallery {
+  margin-top: 14px;
+}
+
 .detail-visual {
   min-height: 440px;
 }

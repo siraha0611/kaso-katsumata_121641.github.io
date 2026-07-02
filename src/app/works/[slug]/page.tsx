@@ -151,15 +151,41 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
         </section>
       ) : null}
 
-      {work.galleryNote ? <p className="gallery-note">{work.galleryNote}</p> : null}
+      {work.showcase ? (
+        <section className="showcase">
+          <SectionTitle eyebrow="Showcase" title="制作物ギャラリー" />
+          {work.showcase.map((group) => (
+            <div className="showcase-group" key={group.title}>
+              <h2>{group.title}</h2>
+              {group.note ? <p className="gallery-note">{group.note}</p> : null}
+              <div className="gallery">
+                {group.images.map((image, index) => (
+                  <a className="gallery-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>
+                    <Image
+                      src={assetPath(thumbnailPath(image))}
+                      alt={`${work.title} ${group.title} ${index + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      ) : (
+        <>
+          {work.galleryNote ? <p className="gallery-note">{work.galleryNote}</p> : null}
 
-      <section className="gallery">
-        {work.images.map((image, index) => (
-          <a className="gallery-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>
-            <Image src={assetPath(thumbnailPath(image))} alt={`${work.title} 作品画像 ${index + 1}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
-          </a>
-        ))}
-      </section>
+          <section className="gallery">
+            {work.images.map((image, index) => (
+              <a className="gallery-item" href={assetPath(image)} target="_blank" rel="noreferrer" key={image}>
+                <Image src={assetPath(thumbnailPath(image))} alt={`${work.title} 作品画像 ${index + 1}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
+              </a>
+            ))}
+          </section>
+        </>
+      )}
 
     </main>
   );
