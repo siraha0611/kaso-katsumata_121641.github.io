@@ -128,11 +128,19 @@ export const works: Work[] = [
       },
       {
         title: "背景画像",
-        note: "全245枚を章別に制作し、シナリオ順に整理して同梱(画像生成AIを活用)。",
+        note: "全245枚を章別に制作し、シナリオ順に整理して同梱(画像生成AIを活用)。喫茶アストレアから炎の神殿、セレファイスへの道のり、月へ向かう帆船まで。",
         images: [
           "/assets/yumegatari-bg-astrea.png",
           "/assets/yumegatari-bg-tea.png",
-          "/assets/yumegatari-bg-stairs.png"
+          "/assets/yumegatari-bg-fire-temple.png",
+          "/assets/yumegatari-bg-stairs.png",
+          "/assets/yumegatari-bg-dream-gate.png",
+          "/assets/yumegatari-bg-white-ship.png",
+          "/assets/yumegatari-bg-celephais-road.png",
+          "/assets/yumegatari-bg-turquoise-temple.png",
+          "/assets/yumegatari-bg-palace.png",
+          "/assets/yumegatari-bg-mt-aran.png",
+          "/assets/yumegatari-bg-golden-ship.png"
         ]
       }
     ],
