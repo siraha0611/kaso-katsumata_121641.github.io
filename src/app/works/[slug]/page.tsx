@@ -115,16 +115,6 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
             ))}
           </ul>
         </article>
-        {work.process ? (
-          <article>
-            <h2>Process</h2>
-            <ol>
-              {work.process.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
-          </article>
-        ) : null}
         <article>
           <h2>Outcome</h2>
           <p>{work.outcome}</p>
@@ -138,6 +128,20 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
           </article>
         ))}
       </section>
+
+      {!work.workflow && work.process ? (
+        <section className="detail-workflow">
+          <SectionTitle eyebrow="Workflow" title="制作の流れ" />
+          <ol className="process-simple">
+            {work.process.map((item, index) => (
+              <li key={item}>
+                <span className="process-number">{String(index + 1).padStart(2, "0")}</span>
+                <p>{item}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ) : null}
 
       {work.workflow ? (
         <section className="detail-workflow">

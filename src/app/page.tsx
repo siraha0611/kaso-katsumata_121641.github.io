@@ -14,6 +14,9 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">PORTFOLIO 2026</p>
           <h1>{profile.nameEn}</h1>
+          <p className="hero-name-ja">
+            {profile.nameJa} ― {profile.school}
+          </p>
           <p className="lead">物語をつくり、絵を描き、ひとりで世に出す。</p>
           <p className="hero-roles">
             TRPGシナリオライター ／ 2Dイラストレーター ／ AIネイティブ・ソロプレナー
@@ -76,6 +79,44 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="About Me"
+          title="私について"
+          description="つくり手としての歩みと実績です。"
+        />
+        <div className="about-teaser">
+          <div className="about-teaser-visual">
+            <Image
+              src={assetPath(thumbnailPath(profile.portrait))}
+              alt={profile.nameJa}
+              fill
+              sizes="(max-width: 900px) 100vw, 30vw"
+            />
+          </div>
+          <div className="about-teaser-copy">
+            <p className="about-teaser-name">
+              {profile.nameJa}
+              <span>{profile.nameEn} ／ {profile.school}</span>
+            </p>
+            <p className="body-text">{profile.summary}</p>
+            <ul className="highlight-list">
+              {profile.highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <div className="hero-actions">
+              <Link className="button" href="/about">
+                自己紹介を見る →
+              </Link>
+              <Link className="button" href="/story">
+                生い立ちを読む →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

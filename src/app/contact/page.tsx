@@ -23,18 +23,6 @@ export default function ContactPage() {
           <h2>Links</h2>
           <p>活動場所をまとめています。</p>
         </div>
-        <div className="featured-link-strip" aria-label="Primary links">
-          <Link href={profile.booth} target="_blank" rel="noreferrer">
-            BOOTH
-          </Link>
-          <Link href={profile.youtube.channel} target="_blank" rel="noreferrer">
-            YouTube
-          </Link>
-          <Link href={profile.x} target="_blank" rel="noreferrer">
-            X
-          </Link>
-          <Link href={`mailto:${profile.email}`}>Mail</Link>
-        </div>
         <div className="link-grid contact-links">
           {profile.links.map((link) => (
             <Link

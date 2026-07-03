@@ -1,11 +1,21 @@
+import Image from "next/image";
 import { SectionTitle } from "@/components/SectionTitle";
+import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export const metadata = {
   title: "生い立ち",
   description: "勝俣颯太の生い立ち。子ども時代の創作から、アニメーション、TRPG、大学院での研究まで。"
 };
 
-const chapters = [
+type Chapter = {
+  year: string;
+  title: string;
+  body: string[];
+  image?: string;
+  imageCaption?: string;
+};
+
+const chapters: Chapter[] = [
   {
     year: "子ども時代",
     title: "空想を、ことばとかたちに",
@@ -35,7 +45,9 @@ const chapters = [
     title: "アニメーションを学ぶ",
     body: [
       "大学で作画と演出を学びながら自主制作を続け、デッサン教室に通い、作画TAやインターンも経験しました。手を動かすほど、キャラクターが動き出す喜びにのめり込んでいきました。"
-    ]
+    ],
+    image: "/assets/gal-2021-01.png",
+    imageCaption: "当時のイラストより"
   },
   {
     year: "2023",
@@ -43,7 +55,9 @@ const chapters = [
     body: [
       "きっかけは、ニコニコ動画の「ゆっくり妖夢と本当は怖いクトゥルフ神話TRPG」でした。プレイヤーとの掛け合いと、重厚な物語。自分でもこんな物語を紡ぎたいと思い、クトゥルフ神話TRPGを書きはじめました。",
       "見せる表現とはちがう、その場に居合わせてしまう「体感」。物語は読むものから、生きるものになりました。"
-    ]
+    ],
+    image: "/assets/gal-2023-01.png",
+    imageCaption: "TRPGの立ち絵制作より"
   },
   {
     year: "2024",
@@ -51,7 +65,9 @@ const chapters = [
     body: [
       "和風SFアクションアニメ『-CORE-』を、企画・キャラクターデザイン・絵コンテ／演出・背景・編集まで担って完成させました。音楽をはじめ、仲間の力も借りた一本です。",
       "2025年度卒業制作展では、アニメ制作ゼミ最優秀賞をいただきました。満足したら立ち止まってしまう――その怖さを越えて、走り切った作品です。"
-    ]
+    ],
+    image: "/assets/core-flyer-front.png",
+    imageCaption: "『-CORE-』公式フライヤー"
   },
   {
     year: "2025–",
@@ -59,7 +75,9 @@ const chapters = [
     body: [
       "大学院に進学し、「TRPGの初回体験と物語設計」を研究テーマに据えました。いまは12万文字を超えるオリジナルシナリオを、ゲームマーケットに向けて制作しています。",
       "つくることは、誰かに何かを伝えること。その実感が、研究と制作の両輪になっています。"
-    ]
+    ],
+    image: "/assets/yumegatari-title.png",
+    imageCaption: "『夢語りはティータイムのあとで』"
   },
   {
     year: "影響",
@@ -99,10 +117,25 @@ export default function StoryPage() {
       {chapters.map((chapter) => (
         <section className="section compact" key={chapter.title}>
           <SectionTitle eyebrow={chapter.year} title={chapter.title} />
-          <div className="about-copy">
-            {chapter.body.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+          <div className={chapter.image ? "story-chapter" : undefined}>
+            <div className="about-copy">
+              {chapter.body.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+            {chapter.image ? (
+              <figure className="story-chapter-visual">
+                <div className="story-chapter-image">
+                  <Image
+                    src={assetPath(thumbnailPath(chapter.image))}
+                    alt={chapter.imageCaption ?? chapter.title}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 32vw"
+                  />
+                </div>
+                {chapter.imageCaption ? <figcaption>{chapter.imageCaption}</figcaption> : null}
+              </figure>
+            ) : null}
           </div>
         </section>
       ))}
