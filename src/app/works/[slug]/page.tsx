@@ -89,6 +89,19 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
         </section>
       ) : null}
 
+      {work.story ? (
+        <section className="detail-story">
+          <SectionTitle eyebrow="Story" title="あらすじ" />
+          {work.story.catch ? <p className="story-catch">{work.story.catch}</p> : null}
+          <div className="story-body">
+            {work.story.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          {work.story.footnote ? <p className="story-footnote">{work.story.footnote}</p> : null}
+        </section>
+      ) : null}
+
       <section className="detail-grid">
         <article>
           <h2>Concept</h2>

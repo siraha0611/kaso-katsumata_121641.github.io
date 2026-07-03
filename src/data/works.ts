@@ -24,6 +24,12 @@ export type ShowcaseGroup = {
   images: string[];
 };
 
+export type WorkStory = {
+  catch?: string;
+  body: string[];
+  footnote?: string;
+};
+
 export type Work = {
   slug: string;
   title: string;
@@ -40,6 +46,7 @@ export type Work = {
   role: string[];
   tools: string[];
   process?: string[];
+  story?: WorkStory;
   workflow?: WorkflowStep[];
   sections?: WorkSection[];
   showcase?: ShowcaseGroup[];
@@ -135,6 +142,23 @@ export const works: Work[] = [
       "現代の喫茶店「喫茶アストレア」の店員たちが、夢の世界ドリームランドへ――日常から夢へ移る導線を、紅茶の色、白いロゴ、手描きの線、幻想的な地図表現でまとめた全4章のキャンペーンシナリオです。4人のプレイヤーそれぞれに秘匿ハンドアウトを用意し、情報の非対称性が物語を動かします。喫茶店の住人から夢の世界の存在まで、NPCの立ち絵はすべて手描きで、役割と関係性が伝わるように制作しています。",
     role: ["シナリオ執筆", "ロゴ", "NPC立ち絵", "MAP・情報設計", "頒布画像", "セッション素材"],
     tools: ["CLIP STUDIO PAINT", "Photoshop", "Illustrator", "生成AI(資料整理・校正)"],
+    story: {
+      catch: "君たちは選ばなくてはならない。「夢」か「現実」か",
+      body: [
+        "都心の片隅にある喫茶アストレア。",
+        "穏やかなクラシックと紅茶の香りに包まれた小さな店だ。",
+        "店主・神応寺 透の元には、",
+        "夢にまつわる奇妙な依頼ばかりが届く。",
+        "あなたたちは喫茶店で働く店員だ。",
+        "そんな君たちに公安警察から一件の協力依頼が届く。",
+        "人が眠ったまま目を覚まさない〈永眠事件〉",
+        "原因不明なこの事件は、夢の世界が関係しているらしい。",
+        "あなたたちは夢の世界への適性を持つ",
+        "幻夢境ドリームランドへ向かい、この事件の原因を",
+        "突き止めなければならない。"
+      ],
+      footnote: "全4章キャンペーン ― I. 妖森ズーグ ／ II. 青都セレファイス ／ III. 禁断レヴェリー ／ IV. 領域エクリプス"
+    },
     workflow: [
       {
         title: "コンセプト設計",
