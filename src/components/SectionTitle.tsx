@@ -8,7 +8,7 @@ type SectionTitleProps = {
 };
 
 const lineWidth = (line: string) =>
-  [...line].reduce((width, ch) => width + ((ch.codePointAt(0) ?? 0) <= 0x024f ? 0.6 : 1), 0);
+  Array.from(line).reduce((width, ch) => width + ((ch.codePointAt(0) ?? 0) <= 0x024f ? 0.6 : 1), 0);
 
 export function SectionTitle({ eyebrow, title, description, as = "h2" }: SectionTitleProps) {
   const Heading = as;
