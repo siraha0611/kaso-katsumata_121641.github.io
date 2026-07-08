@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
@@ -13,6 +14,7 @@ type Chapter = {
   body: string[];
   image?: string;
   imageCaption?: string;
+  link?: { href: string; label: string };
 };
 
 const chapters: Chapter[] = [
@@ -38,16 +40,18 @@ const chapters: Chapter[] = [
     body: [
       "特待生として大学に合格し、最初に取り組んだのが、初めての自主制作アニメ『impossible』でした。",
       "ちょうどコロナ禍。絵も拙く、物語を伝えるのも下手で、何もかもうまくいかない。それでも2か月をまるごと賭けて作りきったこの一本から、私の創作人生は始まりました。いまでも、いちばん印象に残っている制作です。"
-    ]
+    ],
+    link: { href: "/works/impossible", label: "『impossible』を見る" }
   },
   {
     year: "2021–2022",
     title: "アニメーションを\n学ぶ",
     body: [
-      "大学で作画と演出を学びながら自主制作を続け、デッサン教室に通い、作画TAやインターンも経験しました。手を動かすほど、キャラクターが動き出す喜びにのめり込んでいきました。"
+      "大学で作画と演出を学びながら自主制作を続け、デッサン教室に通い、作画TAやインターンも経験しました。手を動かすほど、キャラクターが動き出す喜びにのめり込んでいきました。この時期に9か月をかけて、2本目の自主制作アニメ『Glenda』を完成させています。"
     ],
     image: "/assets/gal-2021-01.png",
-    imageCaption: "当時のイラストより"
+    imageCaption: "当時のイラストより",
+    link: { href: "/works/glenda", label: "『Glenda』を見る" }
   },
   {
     year: "2023",
@@ -67,7 +71,8 @@ const chapters: Chapter[] = [
       "2025年度卒業制作展では、アニメ制作ゼミ最優秀賞をいただきました。満足したら立ち止まってしまう――その怖さを越えて、走り切った作品です。"
     ],
     image: "/assets/core-flyer-front.png",
-    imageCaption: "『-CORE-』公式フライヤー"
+    imageCaption: "『-CORE-』公式フライヤー",
+    link: { href: "/works/core-animation", label: "『-CORE-』の制作工程を見る" }
   },
   {
     year: "2025–",
@@ -121,6 +126,13 @@ export default function StoryPage() {
               {chapter.body.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+              {chapter.link ? (
+                <p className="story-chapter-link">
+                  <Link className="button" href={chapter.link.href}>
+                    {chapter.link.label} →
+                  </Link>
+                </p>
+              ) : null}
             </div>
             {chapter.image ? (
               <figure className="story-chapter-visual">

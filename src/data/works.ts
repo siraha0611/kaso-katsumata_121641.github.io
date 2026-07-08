@@ -358,6 +358,10 @@ export const works: Work[] = [
       {
         href: "https://youtu.be/Go7ThQ1DOP4",
         label: "本編を見る"
+      },
+      {
+        href: "https://youtu.be/0WRfNMmreBY",
+        label: "Vコンテ版を見る（絵コンテの映像化）"
       }
     ],
     excerpt:
@@ -628,6 +632,82 @@ export const works: Work[] = [
     ],
     outcome:
       "9カテゴリ・全192種を含む複数のパックとしてまとめ、BOOTHで頒布しています。いずれもAIを活用して制作した素材です。"
+  },
+  {
+    slug: "glenda",
+    title: "Glenda／グレンダ",
+    subtitle: "自主制作アニメーション ― 大学2〜3年・9か月の個人制作",
+    category: "アニメーション",
+    year: "2023",
+    hero: "/assets/glenda-hero.jpg",
+    images: [
+      "/assets/glenda-hero.jpg",
+      "/assets/glenda-shot-girl.jpg",
+      "/assets/glenda-shot-face.jpg",
+      "/assets/glenda-shot-flight.jpg"
+    ],
+    youtube: "https://www.youtube.com/embed/p2_2DFm0tMo",
+    links: [
+      {
+        href: "https://youtu.be/p2_2DFm0tMo",
+        label: "本編を見る（2分19秒）"
+      }
+    ],
+    excerpt:
+      "浜辺で出会う竜の少女グレンダ。大学2年から3年にかけて、9か月をかけて完成させた自主制作アニメーションです。",
+    concept:
+      "白い肌に赤い翼と角——一目で伝わる竜の少女のキャラクターデザインと作画を軸に、写真素材の背景と組み合わせて画面を構成しました。『impossible』で掴んだ「作りきる力」を、9か月の継続制作で一段引き上げた一本です。",
+    role: ["企画", "キャラクターデザイン", "作画", "演出", "編集"],
+    tools: ["個人制作"],
+    process: [
+      "キャラクター1人で成立する物語を設計し、浜辺を舞台に構成",
+      "作画に集中するため、背景・音はフリー素材を活用して制作リソースを配分",
+      "9か月かけて作画・演出・編集を積み上げ、1本のお話として完成"
+    ],
+    sections: [
+      {
+        title: "クレジット",
+        body: [
+          "BGM：evokemusic.ai「スモールエモーション（アコースティックピアノ）」／SE：Audiostock／背景素材：photoAC・VideoAC。素材の力を借りつつ、作画と編集は個人で行いました。"
+        ]
+      }
+    ],
+    outcome:
+      "2023年4月にYouTubeで公開しました。卒業制作『-CORE-』へ続く、個人制作の2本目のアニメーションです。"
+  },
+  {
+    slug: "impossible",
+    title: "impossible",
+    subtitle: "初めての自主制作アニメーション",
+    category: "アニメーション",
+    year: "2020",
+    hero: "/assets/impossible-hero.jpg",
+    images: [
+      "/assets/impossible-hero.jpg",
+      "/assets/impossible-shot-torii.jpg",
+      "/assets/impossible-shot-color.jpg",
+      "/assets/impossible-shot-end.jpg"
+    ],
+    youtube: "https://www.youtube.com/embed/7_Qg41YQNvI",
+    links: [
+      {
+        href: "https://youtu.be/7_Qg41YQNvI",
+        label: "本編を見る（2分37秒）"
+      }
+    ],
+    excerpt:
+      "特待生として大学に合格した直後、コロナ禍の2か月をまるごと賭けて一人で作りきった、最初の一本。",
+    concept:
+      "「不可能を可能に変える」を掲げた作品です。モノクロで始まった世界が終盤で色を取り戻し、“impossible”の文字が“I'm possible”へ変わる——初めてでも、伝えたい芯を一本通すことにこだわりました。カット割り・作画・編集のすべてが初挑戦です。",
+    role: ["企画", "作画", "編集"],
+    tools: ["個人制作"],
+    process: [
+      "コロナ禍の在宅期間、2か月をまるごと制作に投下",
+      "モノクロからカラーへ、タイトルの反転で「不可能→可能」を表現",
+      "拙さも含めて最後まで作りきり、公開"
+    ],
+    outcome:
+      "2020年6月に公開。何もかもうまくいかない中で作りきったこの一本から創作人生が始まりました。いまでも、いちばん印象に残っている制作です。"
   }
 ];
 
