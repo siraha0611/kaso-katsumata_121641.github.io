@@ -362,6 +362,10 @@ export const works: Work[] = [
       {
         href: "https://youtu.be/0WRfNMmreBY",
         label: "Vコンテ版を見る（絵コンテの映像化）"
+      },
+      {
+        href: "/storyboard",
+        label: "絵コンテ全39ページを見る"
       }
     ],
     excerpt:

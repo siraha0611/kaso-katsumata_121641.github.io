@@ -64,17 +64,23 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
           </div>
           {work.links?.length ? (
             <p className="detail-actions">
-              {work.links.map((link, index) => (
-                <a
-                  className={index === 0 ? "button primary" : "button"}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={link.href}
-                >
-                  {link.label} →
-                </a>
-              ))}
+              {work.links.map((link, index) =>
+                link.href.startsWith("/") ? (
+                  <Link className={index === 0 ? "button primary" : "button"} href={link.href} key={link.href}>
+                    {link.label} →
+                  </Link>
+                ) : (
+                  <a
+                    className={index === 0 ? "button primary" : "button"}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={link.href}
+                  >
+                    {link.label} →
+                  </a>
+                )
+              )}
             </p>
           ) : null}
         </div>

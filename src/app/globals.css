@@ -1647,3 +1647,60 @@ html.motion-ready .reveal.reveal-in {
 .notfound-page {
   min-height: 52vh;
 }
+
+/* ===== Storyboard archive ===== */
+.storyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 26px 22px;
+  padding-bottom: 30px;
+}
+
+.storyboard-item {
+  margin: 0;
+}
+
+.storyboard-media {
+  position: relative;
+  aspect-ratio: 707 / 1000;
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: box-shadow 220ms ease, transform 220ms ease;
+}
+
+.storyboard-item a:hover .storyboard-media {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.storyboard-media img {
+  object-fit: contain;
+}
+
+.storyboard-item figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--smoke);
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+}
+
+.storyboard-page-no {
+  color: var(--rose-dark);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.storyboard-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .storyboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+}
