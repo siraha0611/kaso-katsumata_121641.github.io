@@ -37,21 +37,6 @@ export default function ContactPage() {
           ))}
         </div>
         <div className="contact-section-title">
-          <h2>YouTube</h2>
-          <p>最新動画を埋め込んでいます。</p>
-        </div>
-        <div className="youtube-embed">
-          <iframe
-            src={profile.youtube.latestVideo}
-            title="KASO/勝俣 YouTube latest video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </div>
-        <Link className="button youtube-button" href={profile.youtube.channel} target="_blank" rel="noreferrer">
-          YouTubeチャンネルへ
-        </Link>
-        <div className="contact-section-title">
           <h2>Recent</h2>
           <p>最近の公開物です。</p>
         </div>

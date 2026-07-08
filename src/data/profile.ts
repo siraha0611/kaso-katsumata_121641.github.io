@@ -110,21 +110,11 @@ export const profile = {
   ],
   featuredLinks: [
     {
-      label: "最新の動画",
-      description: "YouTubeをはじめました。",
-      href: "https://youtu.be/WgiRar766-E"
-    },
-    {
       label: "記事公開",
       description: "5年間の歩みを記事にしました。",
       href: "https://note.com/061112160922/n/na13f99d47478"
     }
   ],
-  youtube: {
-    channel: "https://www.youtube.com/@KASOkatsumata",
-    latestVideo: "https://www.youtube.com/embed/WgiRar766-E",
-    latestVideoUrl: "https://youtu.be/WgiRar766-E"
-  },
   booth: "https://kasokatsumata.booth.pm/",
   x: "https://x.com/KASOkatsumata"
 };
