@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { MotionFx } from "@/components/MotionFx";
 import "./globals.css";
 
 const siteOrigin = "https://siraha0611.github.io";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ja">
       <body>
+        <MotionFx />
         <Header />
         {children}
         <Footer />

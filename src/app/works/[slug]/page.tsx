@@ -168,6 +168,65 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
         </section>
       ) : null}
 
+      {work.cutProgress ? (
+        <section className="cut-progress">
+          <SectionTitle eyebrow="One Cut, Every Step" title={"1カットが\nできるまで"} />
+          <p className="cut-progress-intro">{work.cutProgress.intro}</p>
+          {work.cutProgress.script ? (
+            <figure className="script-quote">
+              <blockquote>
+                {work.cutProgress.script.lines.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </blockquote>
+              <figcaption>{work.cutProgress.script.source}</figcaption>
+            </figure>
+          ) : null}
+          {work.cutProgress.cuts.map((cut) => (
+            <div className="cut-row" key={cut.cut}>
+              <h2 className="cut-row-title">
+                <span className="cut-number">{cut.cut}</span>
+                {cut.title}
+                {cut.duration ? <span className="cut-duration">コンテ指定 {cut.duration}</span> : null}
+              </h2>
+              <div className="cut-stages">
+                {cut.stages.map((stage, index) => (
+                  <figure className="cut-stage" key={stage.label}>
+                    <div className="cut-stage-media">
+                      {stage.video ? (
+                        <video
+                          src={assetPath(stage.video)}
+                          poster={stage.poster ? assetPath(stage.poster) : undefined}
+                          muted
+                          loop
+                          playsInline
+                          preload="none"
+                          data-autoplay
+                        />
+                      ) : stage.image ? (
+                        <a href={assetPath(stage.image)} target="_blank" rel="noreferrer">
+                          <Image
+                            src={assetPath(thumbnailPath(stage.image))}
+                            alt={`${cut.cut} ${stage.label}`}
+                            fill
+                            sizes="(max-width: 900px) 72vw, 20vw"
+                          />
+                        </a>
+                      ) : null}
+                    </div>
+                    <figcaption>
+                      <span className="cut-stage-step">{String(index + 1).padStart(2, "0")}</span>
+                      {stage.label}
+                      {stage.video ? <span className="cut-stage-badge">▶ 動画</span> : null}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      ) : null}
+
       {work.showcase ? (
         <section className="showcase">
           <SectionTitle eyebrow="Showcase" title="制作物ギャラリー" />

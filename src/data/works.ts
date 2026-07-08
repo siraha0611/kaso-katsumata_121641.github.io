@@ -30,6 +30,26 @@ export type WorkStory = {
   footnote?: string;
 };
 
+export type CutStage = {
+  label: string;
+  image?: string;
+  video?: string;
+  poster?: string;
+};
+
+export type CutProgressCut = {
+  cut: string;
+  title: string;
+  duration?: string;
+  stages: CutStage[];
+};
+
+export type CutProgress = {
+  intro: string;
+  script?: { source: string; lines: string[] };
+  cuts: CutProgressCut[];
+};
+
 export type Work = {
   slug: string;
   title: string;
@@ -48,6 +68,7 @@ export type Work = {
   process?: string[];
   story?: WorkStory;
   workflow?: WorkflowStep[];
+  cutProgress?: CutProgress;
   sections?: WorkSection[];
   showcase?: ShowcaseGroup[];
   outcome: string;
@@ -326,6 +347,8 @@ export const works: Work[] = [
       "/assets/core-yato-sword.png",
       "/assets/core-imageboard.jpg",
       "/assets/core-lo-frame.png",
+      "/assets/core-ekonte-page14.jpg",
+      "/assets/core-ekonte-page16.jpg",
       "/assets/core-shot-081.png",
       "/assets/core-shot-041.png",
       "/assets/research.png"
@@ -350,6 +373,11 @@ export const works: Work[] = [
         image: "/assets/core-imageboard.jpg"
       },
       {
+        title: "脚本",
+        text: "『百機夜行』の題で脚本を第5稿まで執筆。シーンごとの画とアクションを言葉で固定し、以降の全工程の設計図にする。",
+        image: "/assets/core-script-page.jpg"
+      },
+      {
         title: "キャラクター設定",
         text: "三面図や細部設定を作り、作画時に迷わない基準を作成。",
         image: "/assets/core-yato-turnaround.png"
@@ -360,11 +388,101 @@ export const works: Work[] = [
         image: "/assets/core-workflow-world.png"
       },
       {
-        title: "Vコンテ・LO・作画",
-        text: "映像のテンポとカット構成を確認しながら動きと画面設計を詰め、作画・背景・撮影・編集で一本の映像に仕上げる。",
-        image: "/assets/core-progress.png"
+        title: "絵コンテ",
+        text: "カット番号・カメラ・秒数（3+12＝3秒12コマ）まで指定しながら、80カット超を1コマずつ紙で設計。画面の流れはここで決まる。",
+        image: "/assets/core-ekonte-page14.jpg"
+      },
+      {
+        title: "Vコンテ",
+        text: "絵コンテをつないで映像化し、尺とテンポを検証。音と合わせて編集を重ね、完成形の設計図を先に作る。",
+        image: "/assets/core-vconte-still.jpg"
+      },
+      {
+        title: "レイアウト（LO）",
+        text: "カメラと芝居を原寸で設計する工程。セル（キャラ）とBOOK（前景）を色分けし、画面の重なりまで指定する。",
+        image: "/assets/core-cut14-lo.jpg"
+      },
+      {
+        title: "作画・仕上げ（セル）",
+        text: "LOをもとに動きを作画し、色を塗って透過セルに。カットごとにA・Bなどレイヤー単位で書き出し、撮影に渡す。",
+        image: "/assets/core-cut16-cel.jpg"
+      },
+      {
+        title: "背景美術",
+        text: "LOに合わせて1カットずつ背景を描き起こす。提灯の明かりなど、光まで含めて夜の街の空気を作る。",
+        image: "/assets/core-cut14-bgart.jpg"
+      },
+      {
+        title: "撮影・編集",
+        text: "セル・背景・エフェクトを合成して画面を完成させ、全カットをつないで一本の映像に。風や光のゆらぎもここで足す。",
+        image: "/assets/core-cut14-final.jpg"
       }
     ],
+    cutProgress: {
+      intro:
+        "映像は、同じカットが工程ごとに姿を変えながら、少しずつ完成に近づいていきます。ここでは中盤、ヤトとHAKASEが対峙してから斬撃までの連続4カット（C014〜C017）を例に、絵コンテから完成画面までの積み上がりをそのまま並べました。",
+      script: {
+        source: "脚本 第5稿（企画時タイトル『百機夜行』）― 岩永町・中央商店町入り口（夜）",
+        lines: [
+          "破壊される町の扉。吹き抜ける粉塵。",
+          "道に着地するHAKASE。土煙を凝視。",
+          "砂埃から徐々に現れるHAKASE。",
+          "対峙するヤトとHAKASE。",
+          "ヤト、抜刀。HAKASEに切り掛かる。"
+        ]
+      },
+      cuts: [
+        {
+          cut: "C014",
+          title: "対面するHAKASEとヤト",
+          duration: "3+12",
+          stages: [
+            { label: "絵コンテ", image: "/assets/core-cut14-board.jpg" },
+            { label: "レイアウト", image: "/assets/core-cut14-lo.jpg" },
+            { label: "仕上げ（セル）", image: "/assets/core-cut14-cel.jpg" },
+            { label: "背景美術", image: "/assets/core-cut14-bgart.jpg" },
+            { label: "撮影・完成", video: "/assets/video/core-cut14.mp4", poster: "/assets/core-cut14-poster.jpg" }
+          ]
+        },
+        {
+          cut: "C015",
+          title: "抜刀の構えをとるヤト",
+          duration: "3+0",
+          stages: [
+            { label: "絵コンテ", image: "/assets/core-cut15-board.jpg" },
+            { label: "レイアウト", image: "/assets/core-cut15-lo.jpg" },
+            { label: "仕上げ（セル）", image: "/assets/core-cut15-cel.jpg" },
+            { label: "背景美術", image: "/assets/core-cut15-bgart.jpg" },
+            { label: "撮影・完成", video: "/assets/video/core-cut15.mp4", poster: "/assets/core-cut15-poster.jpg" }
+          ]
+        },
+        {
+          cut: "C016",
+          title: "風が吹き、抜刀",
+          duration: "3+0",
+          stages: [
+            { label: "絵コンテ", image: "/assets/core-cut16-board.jpg" },
+            { label: "レイアウト", image: "/assets/core-cut16-lo.jpg" },
+            { label: "レイアウト（動画）", video: "/assets/video/core-cut16-lo.mp4", poster: "/assets/core-cut16-lo-poster.jpg" },
+            { label: "仕上げ（セル）", image: "/assets/core-cut16-cel.jpg" },
+            { label: "背景美術", image: "/assets/core-cut16-bgart.jpg" },
+            { label: "撮影・完成", video: "/assets/video/core-cut16.mp4", poster: "/assets/core-cut16-poster.jpg" }
+          ]
+        },
+        {
+          cut: "C017",
+          title: "斬撃の軌跡",
+          duration: "1+0",
+          stages: [
+            { label: "絵コンテ", image: "/assets/core-cut17-board.jpg" },
+            { label: "レイアウト", image: "/assets/core-cut17-lo.jpg" },
+            { label: "仕上げ（セル・エフェクト）", image: "/assets/core-cut17-cel.jpg" },
+            { label: "背景美術", image: "/assets/core-cut17-bgart.jpg" },
+            { label: "撮影・完成", video: "/assets/video/core-cut17.mp4", poster: "/assets/core-cut17-poster.jpg" }
+          ]
+        }
+      ]
+    },
     outcome:
       "約1年半をかけた集大成。2025年度卒業制作展でアニメ制作ゼミ最優秀賞を受賞しました。企画・キャラクター・映像までを一貫して手がけ、音楽は悠ぺぇさんに制作いただいた、仲間との一本です。"
   },
