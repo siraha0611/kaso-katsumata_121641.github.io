@@ -36,6 +36,7 @@ export const axes: Axis[] = [
     ],
     works: [
       { title: "-CORE-（卒業制作アニメ）", slug: "core-animation" },
+      { title: "Glenda（自主制作アニメ）", slug: "glenda" },
       { title: "お依頼いただいたお仕事", slug: "commission-works" },
       { title: "立ち絵アーカイブ", slug: "standing-archive" }
     ],
