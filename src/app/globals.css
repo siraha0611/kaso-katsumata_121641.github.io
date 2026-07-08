@@ -1640,3 +1640,7 @@ html.motion-ready .reveal.reveal-in {
 .story-chapter-link {
   margin-top: 22px;
 }
+
+.notfound-page {
+  min-height: 52vh;
+}

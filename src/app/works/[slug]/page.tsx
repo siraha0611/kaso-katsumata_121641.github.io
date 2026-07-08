@@ -20,9 +20,21 @@ export function generateMetadata({ params }: WorkDetailPageProps) {
   if (!work) {
     return { title: "Work" };
   }
+  const heroImage = assetPath(thumbnailPath(work.hero));
   return {
     title: work.title,
-    description: work.excerpt
+    description: work.excerpt,
+    openGraph: {
+      title: work.title,
+      description: work.excerpt,
+      images: [heroImage]
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: work.title,
+      description: work.excerpt,
+      images: [heroImage]
+    }
   };
 }
 
