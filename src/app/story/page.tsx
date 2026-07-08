@@ -14,7 +14,7 @@ type Chapter = {
   body: string[];
   image?: string;
   imageCaption?: string;
-  link?: { href: string; label: string };
+  links?: { href: string; label: string }[];
 };
 
 const chapters: Chapter[] = [
@@ -41,7 +41,7 @@ const chapters: Chapter[] = [
       "特待生として大学に合格し、最初に取り組んだのが、初めての自主制作アニメ『impossible』でした。",
       "ちょうどコロナ禍。絵も拙く、物語を伝えるのも下手で、何もかもうまくいかない。それでも2か月をまるごと賭けて作りきったこの一本から、私の創作人生は始まりました。いまでも、いちばん印象に残っている制作です。"
     ],
-    link: { href: "/works/impossible", label: "『impossible』を見る" }
+    links: [{ href: "/works/impossible", label: "『impossible』を見る" }]
   },
   {
     year: "2021–2022",
@@ -51,7 +51,7 @@ const chapters: Chapter[] = [
     ],
     image: "/assets/gal-2021-01.png",
     imageCaption: "当時のイラストより",
-    link: { href: "/works/glenda", label: "『Glenda』を見る" }
+    links: [{ href: "/works/glenda", label: "『Glenda』を見る" }]
   },
   {
     year: "2023",
@@ -62,7 +62,7 @@ const chapters: Chapter[] = [
     ],
     image: "/assets/gal-2023-01.png",
     imageCaption: "TRPGの立ち絵制作より",
-    link: { href: "/works/yumegatari-teatime", label: "TRPGシナリオ作品を見る" }
+    links: [{ href: "/gallery", label: "立ち絵ギャラリーを見る" }]
   },
   {
     year: "2024",
@@ -73,18 +73,21 @@ const chapters: Chapter[] = [
     ],
     image: "/assets/core-flyer-front.png",
     imageCaption: "『-CORE-』公式フライヤー",
-    link: { href: "/works/core-animation", label: "『-CORE-』の制作工程を見る" }
+    links: [{ href: "/works/core-animation", label: "『-CORE-』の制作工程を見る" }]
   },
   {
     year: "2025–",
     title: "大学院・TRPGへ",
     body: [
-      "大学院に進学し、「TRPGの初回体験と物語設計」を研究テーマに据えました。いまは12万文字を超えるオリジナルシナリオを、ゲームマーケットに向けて制作しています。",
-      "つくることは、誰かに何かを伝えること。その実感が、研究と制作の両輪になっています。"
+      "大学院に進学し、「TRPGの初回体験と物語設計」を研究テーマに据えました。2025年10月からは、12万文字を超えるオリジナルシナリオ『夢語りはティータイムのあとで』の制作をはじめ、現在も物理版をゲームマーケットに向けて制作を続けています。",
+      "研究テーマと地続きの、大学院での本命の制作です。つくることは、誰かに何かを伝えること。その実感が、研究と制作の両輪になっています。"
     ],
     image: "/assets/yumegatari-title.png",
     imageCaption: "『夢語りはティータイムのあとで』",
-    link: { href: "/research", label: "研究の取り組みを見る" }
+    links: [
+      { href: "/works/yumegatari-teatime", label: "『夢語りはティータイムのあとで』を見る" },
+      { href: "/research", label: "研究の取り組みを見る" }
+    ]
   },
   {
     year: "影響",
@@ -128,11 +131,13 @@ export default function StoryPage() {
               {chapter.body.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
-              {chapter.link ? (
+              {chapter.links?.length ? (
                 <p className="story-chapter-link">
-                  <Link className="button" href={chapter.link.href}>
-                    {chapter.link.label} →
-                  </Link>
+                  {chapter.links.map((link) => (
+                    <Link className="button" href={link.href} key={link.href}>
+                      {link.label} →
+                    </Link>
+                  ))}
                 </p>
               ) : null}
             </div>

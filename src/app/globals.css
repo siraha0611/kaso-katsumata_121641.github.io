@@ -1638,6 +1638,9 @@ html.motion-ready .reveal.reveal-in {
 }
 
 .story-chapter-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 22px;
 }
 
