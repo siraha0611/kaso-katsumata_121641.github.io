@@ -275,7 +275,6 @@ export const works: Work[] = [
       "/assets/stand-brat.png",
       "/assets/hdd-shinonome-kill.png",
       "/assets/hdd-shinonome-normal.png",
-      "/assets/hdd-akane.png",
       "/assets/hdd-naname-henrin.png",
       "/assets/hdd-mutsuki-smile.png",
       "/assets/hdd-yamanami-isetsu.png",
