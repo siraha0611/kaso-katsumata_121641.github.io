@@ -61,7 +61,8 @@ const chapters: Chapter[] = [
       "見せる表現とはちがう、その場に居合わせてしまう「体感」。物語は読むものから、生きるものになりました。"
     ],
     image: "/assets/gal-2023-01.png",
-    imageCaption: "TRPGの立ち絵制作より"
+    imageCaption: "TRPGの立ち絵制作より",
+    link: { href: "/works/yumegatari-teatime", label: "TRPGシナリオ作品を見る" }
   },
   {
     year: "2024",
@@ -82,7 +83,8 @@ const chapters: Chapter[] = [
       "つくることは、誰かに何かを伝えること。その実感が、研究と制作の両輪になっています。"
     ],
     image: "/assets/yumegatari-title.png",
-    imageCaption: "『夢語りはティータイムのあとで』"
+    imageCaption: "『夢語りはティータイムのあとで』",
+    link: { href: "/research", label: "研究の取り組みを見る" }
   },
   {
     year: "影響",

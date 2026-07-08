@@ -128,6 +128,18 @@ export const publishedItems = [
     href: "https://youtu.be/7_Qg41YQNvI"
   },
   {
+    title: "Taku with CoC",
+    description: "クトゥルフ神話TRPGの情報ポータル。新作・コラボ・イベント情報を集約。",
+    image: "/assets/taku-slide-1.png",
+    href: "https://takuwith-coc.com"
+  },
+  {
+    title: "扉のむこうの少女 Web版",
+    description: "ブラウザでワンクリックで遊べる、TRPGがはじめての人のための一人用体験。",
+    image: "/assets/tobira-title.png",
+    href: "https://tobira-no-mukou-no-shoujo-web.anb14625siraha.workers.dev/"
+  },
+  {
     title: "YouTube",
     description: "映像、制作物、活動記録を掲載。",
     image: "/assets/core-poster.png",
