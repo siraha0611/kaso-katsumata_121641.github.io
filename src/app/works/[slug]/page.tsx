@@ -20,7 +20,9 @@ export function generateMetadata({ params }: WorkDetailPageProps) {
   if (!work) {
     return { title: "Work" };
   }
-  const heroImage = assetPath(thumbnailPath(work.hero));
+  const siteOrigin = "https://siraha0611.github.io";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const heroImage = `${siteOrigin}${basePath}${thumbnailPath(work.hero)}`;
   return {
     title: work.title,
     description: work.excerpt,
