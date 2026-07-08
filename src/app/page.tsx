@@ -123,7 +123,7 @@ export default function Home() {
       <section className="section">
         <SectionTitle
           eyebrow="Research"
-          title="研究室での取り組み"
+          title={"研究室での\n取り組み"}
           description="現実科学の視点から、TRPGで“現実とは何か”を問う。"
         />
         <div className="research-teaser">

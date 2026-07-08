@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="section compact">
-        <SectionTitle eyebrow="Skills" title="制作領域・使用ツール" />
+        <SectionTitle eyebrow="Skills" title={"制作領域・\n使用ツール"} />
         <div className="skill-list">
           {profile.skills.map((skill) => (
             <span key={skill}>{skill}</span>

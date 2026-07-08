@@ -210,6 +210,11 @@ a {
   display: inline-block;
 }
 
+.section-title h1.title-fit,
+.section-title h2.title-fit {
+  font-size: min(clamp(38px, 6vw, 78px), calc(min(1140px, 100vw - 80px) / var(--title-max-ch, 1)));
+}
+
 .section-title > span,
 .body-text {
   display: block;

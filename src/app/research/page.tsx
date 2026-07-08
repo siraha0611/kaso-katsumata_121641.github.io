@@ -102,7 +102,7 @@ export default function ResearchPage() {
       </section>
 
       <section className="section compact">
-        <SectionTitle eyebrow="Capstone" title="はじめの一歩を、やさしくする" />
+        <SectionTitle eyebrow="Capstone" title={"はじめの一歩を、\nやさしくする"} />
         <div className="about-copy">
           <p>
             その問いを、まずは「入口」から実践しています。修了課題のテーマは、「TRPGの初回体験と、そこへ
@@ -130,7 +130,7 @@ export default function ResearchPage() {
       <section className="section compact">
         <SectionTitle
           eyebrow="Writing"
-          title="つまずきを、ことばでほどく"
+          title={"つまずきを、\nことばでほどく"}
           description="動線設計の一環として、Noteで記事を書いています。"
         />
         <div className="about-copy">
@@ -156,7 +156,7 @@ export default function ResearchPage() {
       </section>
 
       <section className="section compact">
-        <SectionTitle eyebrow="As an AI-native Solopreneur" title="ひとりで、作りながら考える" />
+        <SectionTitle eyebrow="As an AI-native Solopreneur" title={"ひとりで、\n作りながら考える"} />
         <div className="about-copy">
           <p>
             これらの情報サイト・Webアプリ・記事は、AIを道具に、企画から制作・運用までひとりで回しています。
