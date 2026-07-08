@@ -195,7 +195,6 @@ a {
 }
 
 .section-title {
-  max-width: 760px;
   margin-bottom: 28px;
 }
 
@@ -207,9 +206,14 @@ a {
   font-weight: 400;
 }
 
-.section-title span,
+.section-title .title-seg {
+  display: inline-block;
+}
+
+.section-title > span,
 .body-text {
   display: block;
+  max-width: 760px;
   margin-top: 16px;
   color: var(--smoke);
   font-size: 16px;
