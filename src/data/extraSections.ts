@@ -104,6 +104,30 @@ export const publishedItems = [
     href: "https://kasokatsumata.booth.pm/"
   },
   {
+    title: "『-CORE-』本編",
+    description: "卒業制作アニメーション本編。2025年度卒業制作展 アニメ制作ゼミ最優秀賞。",
+    image: "/assets/core-flyer-front.png",
+    href: "https://youtu.be/Go7ThQ1DOP4"
+  },
+  {
+    title: "『百機夜行』Vコンテ ver3",
+    description: "『-CORE-』の絵コンテを全編映像化したVコンテ（3分45秒）。完成前の設計図です。",
+    image: "/assets/core-vconte-still.jpg",
+    href: "https://youtu.be/0WRfNMmreBY"
+  },
+  {
+    title: "Glenda／グレンダ",
+    description: "大学2〜3年・9か月の自主制作アニメーション（2分19秒）。",
+    image: "/assets/glenda-hero.jpg",
+    href: "https://youtu.be/p2_2DFm0tMo"
+  },
+  {
+    title: "impossible",
+    description: "初めての自主制作アニメーション（2020年・2分37秒）。",
+    image: "/assets/impossible-hero.jpg",
+    href: "https://youtu.be/7_Qg41YQNvI"
+  },
+  {
     title: "YouTube",
     description: "映像、制作物、活動記録を掲載。",
     image: "/assets/core-poster.png",
