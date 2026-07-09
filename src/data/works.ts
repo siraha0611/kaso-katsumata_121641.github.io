@@ -641,6 +641,56 @@ export const works: Work[] = [
       "9カテゴリ・全192種を含む複数のパックとしてまとめ、BOOTHで頒布しています。いずれもAIを活用して制作した素材です。"
   },
   {
+    slug: "mythos-scene-pack",
+    title: "クトゥルフ顕現 7シーン動画素材集",
+    subtitle: "神話生物動画シリーズ Vol.1 ― ココフォリア・配信対応",
+    category: "映像/トレーラー",
+    year: "2026",
+    hero: "/assets/mythos-pack-cover.jpg",
+    images: [
+      "/assets/mythos-pack-cover.jpg",
+      "/assets/mythos-scene-01.jpg",
+      "/assets/mythos-scene-02.jpg",
+      "/assets/mythos-scene-03.jpg",
+      "/assets/mythos-scene-04.jpg",
+      "/assets/mythos-scene-05.jpg",
+      "/assets/mythos-scene-06.jpg",
+      "/assets/mythos-scene-07.jpg"
+    ],
+    video: "/assets/video/mythos-scene01.mp4",
+    links: [
+      {
+        href: "https://kasokatsumata.booth.pm/items/8422928",
+        label: "BOOTHで見る（¥500）"
+      }
+    ],
+    excerpt:
+      "クトゥルフの「顕現」を、序章の夢から遭遇・戦闘・エピローグの余韻まで7シーンで網羅した動画素材集。1神格をシナリオ全工程で使い回せる構成です。",
+    concept:
+      "KPがセッションで本当に使う場面から逆算し、顕現2種・夢・遠景目撃・SANチェック用クローズアップ・触手襲撃・沈降の7シーンを1パックにしました。ココフォリアの容量制限(5MB)に収めたWebPと高画質MP4・静止画ポスターの2層構成で、オンラインセッションでも配信でもそのまま使えます。画像生成AIとKlingによるImage-to-Videoを軸にした、AI映像パイプラインの実践作です。",
+    role: ["企画", "プロンプト設計", "AI画像・動画生成", "画質最適化", "パッケージング"],
+    tools: ["画像生成AI", "Kling 3.0 Pro（Image-to-Video）", "ffmpeg / WebP"],
+    workflow: [
+      {
+        title: "両端フレーム設計",
+        text: "シーンの始まり(First)と終わり(Last)の2枚を画像生成AIで作り込み、動画の画作りを先に固定する。統一画風のプロンプトテンプレを全シーンで共有。",
+        image: "/assets/mythos-first-frame.jpg"
+      },
+      {
+        title: "Image-to-Video生成",
+        text: "First+Lastの両端フレーム固定でKling 3.0 Proに動画化させ、狙ったカメラの動きと顕現の芝居に収束させる。",
+        image: "/assets/mythos-last-frame.jpg"
+      },
+      {
+        title: "2層パッケージ化",
+        text: "ココフォリア用に5MB以内へWebP最適化(再生1回→最終フレーム停止)、配信・動画編集用に高画質MP4と静止画ポスターを同梱して頒布形式に整える。",
+        image: "/assets/mythos-pack-cover.jpg"
+      }
+    ],
+    outcome:
+      "全7シーンをBOOTHで¥500で頒布中。神話生物シリーズの第1弾として、反応を見ながら次の神格へ展開していきます。"
+  },
+  {
     slug: "glenda",
     title: "Glenda／グレンダ",
     subtitle: "自主制作アニメーション ― 大学2〜3年・9か月の個人制作",
