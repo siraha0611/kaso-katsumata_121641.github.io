@@ -637,8 +637,34 @@ export const works: Work[] = [
       "発光や合成を作り込み、ループしても破綻しない“本物の光”の見え方に調整",
       "オンラインセッションツールで使いやすいよう、軽量化して配布形式に整理"
     ],
+    showcase: [
+      {
+        title: "演出素材パック",
+        note: "全画面の天候背景・カットイン・戦闘エフェクトなど、9カテゴリ・全192種。BOOTHで頒布中です。",
+        images: [
+          "/assets/booth-pack-cover.png",
+          "/assets/booth-pack-all192.png",
+          "/assets/booth-bg-weather.png",
+          "/assets/booth-cutin.png",
+          "/assets/booth-vfx-grid.png",
+          "/assets/booth-vfx-beforeafter.png"
+        ]
+      },
+      {
+        title: "動く装飾・テーマ別シリーズ",
+        note: "盤面に置くだけで卓の空気を作る、白/黒線画で統一した透過APNGの装飾シリーズ。夏祭り・和風幽玄・海辺・クリスマス・魔導儀式・酒場・ダンジョン・現代都市・西洋ホラー・喫茶の全10テーマ・計201種を制作し、順次公開の準備を進めています。",
+        images: [
+          "/assets/decor-festival-hero.jpg",
+          "/assets/decor-festival-contents.jpg",
+          "/assets/decor-wafu-contents.jpg",
+          "/assets/decor-umi-contents.jpg",
+          "/assets/decor-xmas-contents.jpg",
+          "/assets/decor-ritual-contents.jpg"
+        ]
+      }
+    ],
     outcome:
-      "9カテゴリ・全192種を含む複数のパックとしてまとめ、BOOTHで頒布しています。いずれもAIを活用して制作した素材です。"
+      "9カテゴリ・全192種の演出素材パックをBOOTHで頒布中。さらにテーマ別の動く装飾シリーズ全10テーマ・計201種を制作し、順次公開に向けて準備しています。いずれもAIを活用して制作した素材です。"
   },
   {
     slug: "mythos-scene-pack",
