@@ -59,6 +59,7 @@ export type Work = {
   hero: string;
   images: string[];
   galleryNote?: string;
+  spoilerNote?: string;
   video?: string;
   youtube?: string;
   excerpt: string;
@@ -94,6 +95,8 @@ export const works: Work[] = [
     hero: "/assets/yumegatari-title.png",
     images: [],
     galleryNote: "※一部キャラクターのネタバレを含みます",
+    spoilerNote:
+      "ネタバレ注意：このページには、NPC立ち絵・スチル・MAPなどの制作物掲載にともない、シナリオ内容の一部ネタバレが含まれます。今後プレイヤーとして遊ぶ予定の方はご注意ください。",
     showcase: [
       {
         title: "頒布ビジュアル・ロゴ",

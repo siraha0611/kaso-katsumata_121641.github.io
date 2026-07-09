@@ -89,6 +89,13 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
         </div>
       </section>
 
+      {work.spoilerNote ? (
+        <aside className="spoiler-note" role="note">
+          <span className="spoiler-note-icon" aria-hidden="true">⚠</span>
+          <p>{work.spoilerNote}</p>
+        </aside>
+      ) : null}
+
       {work.youtube ? (
         <section className="media-section">
           <div className="video-embed">
