@@ -18,7 +18,7 @@ export default function WorksPage() {
       </div>
       <div className="work-grid all-works">
         {works.map((work, index) => (
-          <WorkCard key={work.slug} work={work} priority={index < 2} />
+          <WorkCard key={work.slug} work={work} priority={index < 2} headingLevel="h2" />
         ))}
       </div>
     </main>

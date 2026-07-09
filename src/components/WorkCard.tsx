@@ -6,9 +6,11 @@ import { assetPath, thumbnailPath } from "@/lib/assetPath";
 type WorkCardProps = {
   work: Work;
   priority?: boolean;
+  headingLevel?: "h2" | "h3";
 };
 
-export function WorkCard({ work, priority = false }: WorkCardProps) {
+export function WorkCard({ work, priority = false, headingLevel = "h3" }: WorkCardProps) {
+  const Heading = headingLevel;
   return (
     <Link className="work-card" href={`/works/${work.slug}`}>
       <div className="work-card-image">
@@ -19,7 +21,7 @@ export function WorkCard({ work, priority = false }: WorkCardProps) {
           <span>{work.category}</span>
           <span>{work.year}</span>
         </div>
-        <h3>{work.title}</h3>
+        <Heading className="work-card-title">{work.title}</Heading>
         <p>{work.excerpt}</p>
         {work.galleryNote ? <p className="work-card-note">{work.galleryNote}</p> : null}
       </div>
