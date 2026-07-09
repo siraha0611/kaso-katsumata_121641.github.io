@@ -14,6 +14,11 @@ export const metadata = {
     title: "開発 ― 制作を支える自作ツール",
     description: "制作のボトルネックを、自分の手で道具にして解決する。自作ツール群の紹介。",
     images: [`${siteOrigin}${basePath}/assets/thumbs/tools-binder.jpg`]
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "開発 ― 制作を支える自作ツール",
+    images: [`${siteOrigin}${basePath}/assets/thumbs/tools-binder.jpg`]
   }
 };
 

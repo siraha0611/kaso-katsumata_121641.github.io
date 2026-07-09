@@ -14,6 +14,11 @@ export const metadata = {
     title: "絵コンテ・アーカイブ ―『-CORE-』全39ページ",
     description: "アニメ『-CORE-』の絵コンテ全39ページをそのまま公開した制作資料アーカイブ。",
     images: [`${siteOrigin}${basePath}/assets/thumbs/core-ekonte-p06.jpg`]
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "絵コンテ・アーカイブ ―『-CORE-』全39ページ",
+    images: [`${siteOrigin}${basePath}/assets/thumbs/core-ekonte-p06.jpg`]
   }
 };
 
