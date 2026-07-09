@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { LiteYouTube } from "@/components/LiteYouTube";
 import { SectionTitle } from "@/components/SectionTitle";
 import { getWork, works } from "@/data/works";
 import { assetPath, thumbnailPath } from "@/lib/assetPath";
@@ -99,12 +100,10 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
       {work.youtube ? (
         <section className="media-section">
           <div className="video-embed">
-            <iframe
-              src={work.youtube}
+            <LiteYouTube
+              embedUrl={work.youtube}
               title={work.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
+              poster={assetPath(thumbnailPath(work.hero))}
             />
           </div>
         </section>
