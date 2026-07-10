@@ -1929,3 +1929,104 @@ html.motion-ready .smoke.smoke-in {
     filter: blur(0);
   }
 }
+
+/* ===== Story: Apple-style scenes, ribbon, pull quote ===== */
+.story-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 82vh;
+  scroll-margin-top: 120px;
+}
+
+.story-scene .story-heading {
+  font-size: clamp(30px, 4.8vw, 54px);
+  line-height: 1.38;
+}
+
+.story-copy p:first-child {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.story-copy p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.story-ribbon {
+  position: sticky;
+  top: 64px;
+  z-index: 15;
+  margin: 0 -8px;
+  padding: 0 8px;
+  background: rgba(251, 250, 247, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.story-ribbon-inner {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.story-ribbon-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.story-ribbon a {
+  flex: none;
+  padding: 6px 13px;
+  border-radius: 999px;
+  color: var(--smoke);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.story-ribbon a:hover {
+  color: var(--ink);
+}
+
+.story-ribbon a.is-active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.story-quote {
+  margin: 6px 0 26px;
+  padding: 0;
+}
+
+.story-quote p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2.9vw, 31px);
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.story-quote cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--smoke);
+  font-size: 13px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .story-scene {
+    min-height: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .story-ribbon {
+    top: 0;
+  }
+}
