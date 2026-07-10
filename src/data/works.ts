@@ -237,6 +237,10 @@ export const works: Work[] = [
     links: [
       { href: "https://booth.pm/ja/items/8045336", label: "BOOTHで見る" },
       {
+        href: "https://siraha0611.github.io/yumegatari-official-site/",
+        label: "公式サイトを見る"
+      },
+      {
         href: "https://note.com/061112160922/n/n210c3a54dc48",
         label: "note: AIで作ってみた話（実録）"
       },
