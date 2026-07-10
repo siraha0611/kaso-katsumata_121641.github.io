@@ -674,16 +674,17 @@ export const works: Work[] = [
     year: "2026",
     hero: "/assets/mythos-pack-cover.jpg",
     images: [
-      "/assets/mythos-pack-cover.jpg",
-      "/assets/mythos-scene-01.jpg",
-      "/assets/mythos-scene-02.jpg",
-      "/assets/mythos-scene-03.jpg",
-      "/assets/mythos-scene-04.jpg",
-      "/assets/mythos-scene-05.jpg",
-      "/assets/mythos-scene-06.jpg",
-      "/assets/mythos-scene-07.jpg"
+      "/assets/mythos-scene-01.webp",
+      "/assets/mythos-scene-02.webp",
+      "/assets/mythos-scene-03.webp",
+      "/assets/mythos-scene-04.webp",
+      "/assets/mythos-scene-05.webp",
+      "/assets/mythos-scene-06.webp",
+      "/assets/mythos-scene-07.webp",
+      "/assets/mythos-pack-cover.jpg"
     ],
-    video: "/assets/video/mythos-scene01.mp4",
+    galleryNote:
+      "※各シーンはループ再生用に再圧縮したプレビューです。頒布版はより高解像度のWebP/MP4を同梱しています。",
     links: [
       {
         href: "https://kasokatsumata.booth.pm/items/8422928",
