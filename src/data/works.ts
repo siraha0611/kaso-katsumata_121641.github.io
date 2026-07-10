@@ -640,8 +640,14 @@ export const works: Work[] = [
     showcase: [
       {
         title: "演出素材パック",
-        note: "全画面の天候背景・カットイン・戦闘エフェクトなど、9カテゴリ・全192種。BOOTHで頒布中です。",
+        note: "全画面の天候背景・カットイン・戦闘エフェクトなど、9カテゴリ・全192種。BOOTHで頒布中です。上段6点は天候背景の実際の動きのプレビューです（雨・吹雪・星空・水面の光・火の粉・雷雨）。頒布版はフルHDのループ素材です。",
         images: [
+          "/assets/bgweather-motion-rain.webp",
+          "/assets/bgweather-motion-blizzard.webp",
+          "/assets/bgweather-motion-starry.webp",
+          "/assets/bgweather-motion-caustics.webp",
+          "/assets/bgweather-motion-embers.webp",
+          "/assets/bgweather-motion-storm.webp",
           "/assets/booth-pack-cover.png",
           "/assets/booth-pack-all192.png",
           "/assets/booth-bg-weather.png",
