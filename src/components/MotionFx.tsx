@@ -41,7 +41,7 @@ export function MotionFx() {
     const elements = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTORS));
     const siblingCount = new Map<HTMLElement | null, number>();
     elements.forEach((el) => {
-      if (el.classList.contains("reveal")) {
+      if (el.classList.contains("reveal") || el.classList.contains("smoke-target")) {
         return;
       }
       const parent = el.parentElement;
@@ -51,14 +51,35 @@ export function MotionFx() {
       el.classList.add("reveal");
     });
 
+    const smokeElements = Array.from(document.querySelectorAll<HTMLElement>(".smoke-target"));
+    const smokeCount = new Map<HTMLElement | null, number>();
+    smokeElements.forEach((el) => {
+      if (el.classList.contains("smoke")) {
+        return;
+      }
+      const parent = el.parentElement;
+      const index = smokeCount.get(parent) ?? 0;
+      el.style.setProperty("--smoke-delay", `${Math.min(index * 160, 640)}ms`);
+      smokeCount.set(parent, index + 1);
+      el.classList.add("smoke");
+    });
+
     const cleanUp = (el: HTMLElement) => {
       el.classList.remove("reveal", "reveal-in");
       el.style.removeProperty("--reveal-delay");
     };
 
+    const cleanUpSmoke = (el: HTMLElement) => {
+      el.classList.remove("smoke", "smoke-in");
+      el.style.removeProperty("--smoke-delay");
+    };
+
     const onAnimationEnd = (event: AnimationEvent) => {
       if (event.animationName === "revealRise") {
         cleanUp(event.target as HTMLElement);
+      }
+      if (event.animationName === "smokeRise") {
+        cleanUpSmoke(event.target as HTMLElement);
       }
     };
     document.addEventListener("animationend", onAnimationEnd);
@@ -67,8 +88,9 @@ export function MotionFx() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            (entry.target as HTMLElement).classList.add("reveal-in");
-            revealObserver.unobserve(entry.target);
+            const el = entry.target as HTMLElement;
+            el.classList.add(el.classList.contains("smoke") ? "smoke-in" : "reveal-in");
+            revealObserver.unobserve(el);
           }
         });
       },
@@ -76,6 +98,11 @@ export function MotionFx() {
     );
     elements.forEach((el) => {
       if (el.classList.contains("reveal")) {
+        revealObserver.observe(el);
+      }
+    });
+    smokeElements.forEach((el) => {
+      if (el.classList.contains("smoke")) {
         revealObserver.observe(el);
       }
     });
@@ -102,6 +129,7 @@ export function MotionFx() {
       revealObserver.disconnect();
       videoObserver.disconnect();
       elements.forEach(cleanUp);
+      smokeElements.forEach(cleanUpSmoke);
     };
   }, [pathname]);
 

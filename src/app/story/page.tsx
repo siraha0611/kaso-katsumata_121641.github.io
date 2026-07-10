@@ -117,19 +117,30 @@ export default function StoryPage() {
         description="物語を、誰かが体感できるかたちに。ここまでの道のりです。"
       />
       <section className="section compact">
-        <div className="about-copy">
-          <p>
+        <div className="about-copy story-copy">
+          <p className="smoke-target">
             子どものころの空想から、アニメーション、そしてTRPGまで。かたちは変わっても、やりたいことはいつも「物語を、誰かが体感できるかたちにすること」でした。
           </p>
         </div>
       </section>
       {chapters.map((chapter) => (
         <section className="section compact" key={chapter.title}>
-          <SectionTitle eyebrow={chapter.year} title={chapter.title} />
+          <header className="story-head">
+            <p className="story-era smoke-target">{chapter.year}</p>
+            <h2 className="story-heading">
+              {chapter.title.split("\n").map((segment) => (
+                <span className="title-seg smoke-target" key={segment}>
+                  {segment}
+                </span>
+              ))}
+            </h2>
+          </header>
           <div className={chapter.image ? "story-chapter" : undefined}>
-            <div className="about-copy">
+            <div className="about-copy story-copy">
               {chapter.body.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p className="smoke-target" key={index}>
+                  {paragraph}
+                </p>
               ))}
               {chapter.links?.length ? (
                 <p className="story-chapter-link">

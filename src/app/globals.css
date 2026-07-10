@@ -1873,3 +1873,59 @@ html.motion-ready .reveal.reveal-in {
   letter-spacing: 0.08em;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
+
+/* ===== Story: readable chapters + smoke reveal ===== */
+.story-head {
+  margin-bottom: 14px;
+}
+
+.story-era {
+  margin: 0 0 10px;
+  color: var(--rose-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.story-heading {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(25px, 3.4vw, 36px);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.story-heading .title-seg {
+  display: inline-block;
+  margin-right: 0.35em;
+}
+
+.story-copy p {
+  max-width: 680px;
+}
+
+html.motion-ready .smoke {
+  opacity: 0;
+}
+
+html.motion-ready .smoke.smoke-in {
+  animation: smokeRise 1.6s cubic-bezier(0.19, 1, 0.22, 1) var(--smoke-delay, 0ms) both;
+}
+
+@keyframes smokeRise {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(12px);
+  }
+  60% {
+    opacity: 0.92;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
