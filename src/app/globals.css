@@ -2027,6 +2027,11 @@ html.motion-ready .smoke.smoke-in {
   }
 
   .story-ribbon {
-    top: 0;
+    position: static;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }
