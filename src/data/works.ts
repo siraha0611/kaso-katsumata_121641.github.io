@@ -652,8 +652,14 @@ export const works: Work[] = [
       },
       {
         title: "動く装飾・テーマ別シリーズ",
-        note: "盤面に置くだけで卓の空気を作る、白/黒線画で統一した透過APNGの装飾シリーズ。夏祭り・和風幽玄・海辺・クリスマス・魔導儀式・酒場・ダンジョン・現代都市・西洋ホラー・喫茶の全10テーマ・計201種を制作し、順次公開の準備を進めています。",
+        note: "盤面に置くだけで卓の空気を作る、白/黒線画で統一した透過APNGの装飾シリーズ。夏祭り・和風幽玄・海辺・クリスマス・魔導儀式・酒場・ダンジョン・現代都市・西洋ホラー・喫茶の全10テーマ・計201種を制作し、順次公開の準備を進めています。上段6点は実際の動きのプレビューです（泳ぐ金魚・狐火・魔法陣・松明・ティーポット・波打ち際）。",
         images: [
+          "/assets/decor-motion-kingyo.webp",
+          "/assets/decor-motion-kitsunebi.webp",
+          "/assets/decor-motion-magiccircle.webp",
+          "/assets/decor-motion-torch.webp",
+          "/assets/decor-motion-teapot.webp",
+          "/assets/decor-motion-nagisa.webp",
           "/assets/decor-festival-hero.jpg",
           "/assets/decor-festival-contents.jpg",
           "/assets/decor-wafu-contents.jpg",
