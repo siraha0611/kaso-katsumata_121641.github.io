@@ -12,6 +12,8 @@ const navItems = [
   { href: "/contact", label: "Contact" }
 ];
 
+const navCta = { href: "/for-recruiters", label: "採用ご担当の方へ" };
+
 export function Header() {
   return (
     <header className="site-header">
@@ -25,6 +27,9 @@ export function Header() {
             {item.label}
           </Link>
         ))}
+        <Link className="nav-cta" href={navCta.href}>
+          {navCta.label}
+        </Link>
       </nav>
     </header>
   );

@@ -2035,3 +2035,337 @@ html.motion-ready .smoke.smoke-in {
     -webkit-backdrop-filter: none;
   }
 }
+
+/* ---- Header CTA ---- */
+.site-header nav .nav-cta {
+  padding: 5px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.site-header nav .nav-cta:hover {
+  color: var(--paper);
+  opacity: 0.78;
+}
+
+/* ---- Hero recruiter link ---- */
+.hero-recruiter {
+  margin: 22px 0 0;
+  font-size: 14px;
+}
+
+.hero-recruiter a {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 3px;
+  color: var(--rose-dark);
+  transition: border-color 0.2s ease;
+}
+
+.hero-recruiter a:hover {
+  border-bottom-color: var(--rose-dark);
+}
+
+/* ---- Chips (担当範囲) ---- */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--smoke);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.chip-list li.chip-more {
+  border-style: dashed;
+}
+
+.work-card-roles {
+  margin-top: 14px;
+}
+
+/* ---- Works category filter ---- */
+.category-list button {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--smoke);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.category-list button small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.category-list button:hover {
+  border-color: var(--rose-dark);
+  color: var(--rose-dark);
+}
+
+.category-list button.is-active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.filter-status {
+  margin: 14px 0 0;
+  color: var(--smoke);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ---- Facts ---- */
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.fact-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 26px 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.fact-value {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.fact-value span {
+  margin-left: 6px;
+  font-family: "Hiragino Sans", "Yu Gothic", "YuGothic", system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--smoke);
+}
+
+.fact-card h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.fact-note {
+  margin: 0;
+  color: var(--smoke);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ---- Recruiter CTA band ---- */
+.recruiter-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 26px;
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  background: var(--soft-paper);
+}
+
+.recruiter-cta h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.recruiter-cta p {
+  margin: 0;
+  max-width: 620px;
+  color: var(--smoke);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.recruiter-cta .button {
+  flex-shrink: 0;
+}
+
+/* ---- For Recruiters page ---- */
+.recruiter-lead {
+  display: grid;
+  gap: 14px;
+  max-width: 780px;
+}
+
+.recruiter-lead p {
+  margin: 0;
+  color: var(--smoke);
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.recruiter-lead p:first-child {
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.route-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.route-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 34px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.route-no {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  color: var(--rose-dark);
+}
+
+.route-no span {
+  font-family: "Hiragino Sans", "Yu Gothic", "YuGothic", system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--smoke);
+}
+
+.route-head h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.route-lead {
+  margin: 0 0 16px;
+  color: var(--smoke);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.route-works {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: route;
+}
+
+.route-works li a {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.route-works li a:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.route-works strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.route-works span {
+  color: var(--smoke);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .fact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .route-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .recruiter-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .fact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header nav .nav-cta {
+    padding: 4px 12px;
+  }
+
+  .recruiter-cta .button {
+    width: 100%;
+  }
+}
+
+/* Card contents must never size the card's grid track wider than the card itself. */
+.work-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.work-card-body {
+  min-width: 0;
+}
+
+.chip-list li {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.route-roles-label {
+  margin: 0 0 8px;
+  color: var(--smoke);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* Keyboard focus for the controls added above. */
+.category-list button:focus-visible,
+.site-header nav .nav-cta:focus-visible,
+.route-works li a:focus-visible,
+.hero-recruiter a:focus-visible {
+  outline: 2px solid var(--rose-dark);
+  outline-offset: 3px;
+}

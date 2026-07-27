@@ -23,6 +23,12 @@ export function WorkCard({ work, priority = false, headingLevel = "h3" }: WorkCa
         </div>
         <Heading className="work-card-title">{work.title}</Heading>
         <p>{work.excerpt}</p>
+        <ul className="chip-list work-card-roles" aria-label="担当範囲">
+          {work.role.slice(0, 4).map((role) => (
+            <li key={role}>{role}</li>
+          ))}
+          {work.role.length > 4 ? <li className="chip-more">ほか{work.role.length - 4}件</li> : null}
+        </ul>
         {work.galleryNote ? <p className="work-card-note">{work.galleryNote}</p> : null}
       </div>
     </Link>

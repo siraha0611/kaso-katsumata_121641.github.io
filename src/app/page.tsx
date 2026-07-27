@@ -5,6 +5,7 @@ import { WorkCard } from "@/components/WorkCard";
 import { featuredWorks, works } from "@/data/works";
 import { profile } from "@/data/profile";
 import { axes } from "@/data/axes";
+import { facts } from "@/data/recruiter";
 import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function Home() {
@@ -32,6 +33,9 @@ export default function Home() {
               Links / Contact
             </Link>
           </div>
+          <p className="hero-recruiter">
+            <Link href="/for-recruiters">採用ご担当の方へ ― 3分ほどで見どころをまとめています →</Link>
+          </p>
         </div>
         <div className="hero-visual" aria-label="Featured artwork">
           <Image src={assetPath(thumbnailPath("/assets/yumegatari-title.png"))} alt="夢語りはティータイムのあとで" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
@@ -182,27 +186,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section split">
-        <div>
-          <SectionTitle eyebrow="Archive" title="制作の幅" />
-          <p className="body-text">
-            シナリオ、立ち絵、NPC、ロゴ、MAP、映像、Webプロダクトまで、作品世界に必要なものを横断して制作しています。
-            各ページでは完成物に加えて、設計意図と工程も掲載しています。
-          </p>
+      <section className="section">
+        <SectionTitle
+          eyebrow="Archive"
+          title="制作の幅"
+          description="シナリオ、立ち絵、NPC、ロゴ、MAP、映像、Webプロダクトまで、作品世界に必要なものを横断して制作しています。以下の数字は、いずれも作品ページで内訳と制作例を確認いただけます。"
+        />
+        <div className="fact-grid">
+          {facts.map((fact) => (
+            <article className="fact-card" key={fact.label}>
+              <p className="fact-value">
+                {fact.value}
+                {fact.unit ? <span>{fact.unit}</span> : null}
+              </p>
+              <h3>{fact.label}</h3>
+              <p className="fact-note">{fact.note}</p>
+            </article>
+          ))}
         </div>
-        <div className="stats">
+        <div className="recruiter-cta">
           <div>
-            <strong>{works.length}</strong>
-            <span>Projects</span>
+            <h3>採用ご担当の方へ</h3>
+            <p>企画・プランナー／2Dデザイン・キャラクター／映像・アニメーションの職種別に、見どころを3分ほどでまとめています。</p>
           </div>
-          <div>
-            <strong>3</strong>
-            <span>Fields</span>
-          </div>
-          <div>
-            <strong>2026</strong>
-            <span>Portfolio</span>
-          </div>
+          <Link className="button primary" href="/for-recruiters">
+            見どころを見る →
+          </Link>
         </div>
       </section>
     </main>
