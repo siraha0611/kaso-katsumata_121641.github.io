@@ -593,6 +593,14 @@ a {
   line-height: 1.18;
 }
 
+.detail-copy h1 .title-seg {
+  display: inline-block;
+}
+
+.detail-copy h1 .title-seg:not(:last-child) {
+  margin-right: 0.22em;
+}
+
 .detail-copy > p:not(.eyebrow) {
   color: var(--smoke);
   font-size: 18px;

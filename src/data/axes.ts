@@ -49,9 +49,10 @@ export const axes: Axis[] = [
     lead: "企画から実装・運用まで、ひとりで形にする。",
     body: [
       "「全てをエンタテインメントにして世の中を豊かに」――進路を決めたその言葉を、いまはAIを道具に実践しています。作ることは本質的に意思の伝達。技術は、伝えたい体験を相手に届けるための手段だと考えています。",
-      "動く演出素材の量産、クトゥルフ神話TRPGの情報ポータル『Taku with CoC』の立ち上げ、ブラウザで遊べるTRPG入門『扉のむこうの少女』まで、企画・制作・実装・運用をひとりで回しています。"
+      "動く演出素材の量産、クトゥルフ神話TRPGの情報ポータル『Taku with CoC』の立ち上げ、ブラウザで遊べるTRPG入門『扉のむこうの少女』、そしてAIがKPを務める『AI-KP 夢ティ専用機』の研究開発まで、企画・制作・実装・運用をひとりで回しています。"
     ],
     works: [
+      { title: "AI-KP 夢ティ専用機（研究開発中）", slug: "ai-kp-yumeti" },
       { title: "扉のむこうの少女 Web版", slug: "tobira-no-mukou-no-shoujo" },
       { title: "Taku with CoC", slug: "taku-with-coc" },
       { title: "TRPG向け 動く演出素材", slug: "booth-motion-assets" }

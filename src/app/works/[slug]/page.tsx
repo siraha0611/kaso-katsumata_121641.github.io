@@ -57,7 +57,15 @@ export default function WorkDetailPage({ params }: WorkDetailPageProps) {
       <section className="detail-hero">
         <div className="detail-copy">
           <p className="eyebrow">{work.category}</p>
-          <h1>{work.title}</h1>
+          <h1>
+            {work.titleLines
+              ? work.titleLines.map((seg) => (
+                  <span className="title-seg" key={seg}>
+                    {seg}
+                  </span>
+                ))
+              : work.title}
+          </h1>
           <p>{work.subtitle}</p>
           <div className="meta-row large">
             <span>{work.year}</span>

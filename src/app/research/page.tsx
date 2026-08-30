@@ -128,6 +128,46 @@ export default function ResearchPage() {
       </section>
 
       <section className="section compact">
+        <SectionTitle eyebrow="AI × TRPG" title={"一人の夜にも、\n開かれた遊びを"} />
+        <div className="about-copy">
+          <p>
+            入口の研究の先で、いま取り組んでいるのが「AIと対話しながら、一人でも遊べるTRPG」の研究開発です。
+            TRPGの魅力は自由な会話で物語が無限に広がること。けれど、人が揃わないと始められない――
+            その制約を、AIがKP（進行役）を務めるエンジン『AI-KP 夢ティ専用機』でほどこうとしています。
+            自由な会話と、一人でいつでも遊べる手軽さを両立する、TRPGとコンピュータRPGの複合型の遊びへ。
+            修了課題の中核実装として、権利面に配慮した非公開の内部試験を重ねています。
+          </p>
+        </div>
+        <div className="link-grid contact-links">
+          <Link href="/works/ai-kp-yumeti">
+            <span>AI-KP 夢ティ専用機 ― 研究開発中</span>
+            <small>AIがKPを務める、一人でも遊べるTRPGエンジン。</small>
+          </Link>
+        </div>
+      </section>
+
+      <section className="section compact">
+        <SectionTitle
+          eyebrow="Papers in Progress"
+          title={"文化を、\n論文にして残す"}
+          description="TRPGという遊びの歩みを、学術のことばで記録する――いずれも現在執筆中・投稿準備中の研究です。"
+        />
+        <div className="about-copy">
+          <p>
+            制作と並行して、TRPG文化を対象にした学術論文の執筆を進めています。中心となるのは、
+            リプレイの時代から動画・オンラインセッション・同人シナリオ市場まで、日本のTRPGが
+            「どう遊ばれてきたか」の40年を、プレイを観る形式・作品の頒布形態・権利の制度という
+            三つの転換から整理する通史の論文です。教員の助言を受けて改稿を重ね、査読つき学術誌への
+            投稿を準備しています。
+          </p>
+          <p>
+            このほか、ミニチュアウォーゲームからTRPGが生まれる過程の設計転換を扱う論文も執筆中です。
+            遊び手であり作り手でもある立場から書ける記録を、研究のかたちで残していきます。
+          </p>
+        </div>
+      </section>
+
+      <section className="section compact">
         <SectionTitle
           eyebrow="Writing"
           title={"つまずきを、\nことばでほどく"}
