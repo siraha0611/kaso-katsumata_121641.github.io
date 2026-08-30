@@ -595,6 +595,8 @@ export const works: Work[] = [
       "/assets/commission-work-3-rinno.png",
       "/assets/commission-work-4-seitero1.png",
       "/assets/commission-work-5-seitero2.png",
+      "/assets/commission-work-6-estel.png",
+      "/assets/commission-work-7-yumeti-party.png",
       "/assets/standing-commission.png",
       "/assets/commission-chiri.png",
       "/assets/commission-amano.png"
