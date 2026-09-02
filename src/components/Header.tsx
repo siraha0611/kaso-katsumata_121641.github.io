@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { assetPath } from "@/lib/assetPath";
 
 const navItems = [
   { href: "/", label: "Top" },
@@ -19,14 +17,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="KASO集落工房 Top">
-        <Image
-          className="brand-logo"
-          src={assetPath("/assets/kobo-logo-dark.png")}
-          alt="KASO集落工房"
-          width={938}
-          height={100}
-          priority
-        />
+        <span>KASO集落工房</span>
         <small>TRPG素材・シナリオ・ツールの工房</small>
       </Link>
       <nav aria-label="Primary navigation">
