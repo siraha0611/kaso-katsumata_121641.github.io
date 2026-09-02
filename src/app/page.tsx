@@ -6,6 +6,7 @@ import { featuredWorks, works } from "@/data/works";
 import { profile } from "@/data/profile";
 import { axes } from "@/data/axes";
 import { facts } from "@/data/recruiter";
+import { latestNews } from "@/data/news";
 import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export default function Home() {
@@ -13,29 +14,33 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">PORTFOLIO 2026</p>
-          <h1>{profile.nameEn}</h1>
-          <p className="hero-name-ja">
-            {profile.nameJa} ― {profile.school}
-          </p>
-          <p className="lead">物語をつくり、絵を描き、ひとりで世に出す。</p>
+          <p className="eyebrow">KASO VILLAGE STUDIO</p>
+          <h1 className="hero-logo-wrap">
+            <Image
+              className="hero-logo"
+              src={assetPath("/assets/kobo-logo-dark.png")}
+              alt="KASO集落工房"
+              width={938}
+              height={100}
+              priority
+            />
+          </h1>
+          <p className="lead">TRPGの「遊ぶ体験」を、まるごとつくる工房。</p>
           <p className="hero-roles">
-            TRPGシナリオライター ／ 2Dイラストレーター ／ AIネイティブ・ソロプレナー
+            素材・シナリオの制作と頒布 ／ 立ち絵の受託制作 ／ 制作ツールの開発
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/works">
-              Worksを見る
+            <a className="button primary" href="https://kasokatsumata.booth.pm/" target="_blank" rel="noreferrer">
+              BOOTHで作品を見る
+            </a>
+            <Link className="button" href="/services">
+              事業内容
             </Link>
-            <Link className="button" href="/portfolio-katsumata-sota.pdf" target="_blank" rel="noreferrer">
-              ポートフォリオPDF
-            </Link>
-            <Link className="button" href="/contact">
-              Links / Contact
+            <Link className="button" href="/news">
+              お知らせ
             </Link>
           </div>
-          <p className="hero-recruiter">
-            <Link href="/for-recruiters">採用ご担当の方へ ― 3分ほどで見どころをまとめています →</Link>
-          </p>
+          <p className="hero-name-ja">代表・制作: {profile.nameJa}（KASO）</p>
         </div>
         <div className="hero-visual" aria-label="Featured artwork">
           <Image src={assetPath(thumbnailPath("/assets/yumegatari-title.png"))} alt="夢語りはティータイムのあとで" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
@@ -44,14 +49,78 @@ export default function Home() {
 
       <section className="intro-band">
         <p>
-          「夢」「魂」「現実と虚構の境界」をテーマに、物語・イラスト・アニメーション・Webを横断して制作しています。
-          遊ぶ前から惹かれ、遊んだ後に残る――そんな体験を、3つの軸でつくっています。
+          セッションの画面をつくる素材から、長編シナリオ、制作を支えるツールまで。
+          「遊ぶ前から惹かれ、遊んだ後に残る」体験を、企画から出荷までひとりで組み立てています。
         </p>
+      </section>
+
+      <section className="section compact">
+        <SectionTitle
+          eyebrow="News"
+          title="お知らせ"
+          description="工房の新作・イベント・制作の近況です。"
+        />
+        <div className="news-list">
+          {latestNews.map((item) => (
+            <div className="news-row" key={`${item.date}-${item.title}`}>
+              <span className="news-date">{item.date}</span>
+              <span className={`news-chip`}>{item.category}</span>
+              <span className="news-title">
+                {item.href ? (
+                  item.href.startsWith("/") ? (
+                    <Link href={item.href}>{item.title}</Link>
+                  ) : (
+                    <a href={item.href} target="_blank" rel="noreferrer">
+                      {item.title}
+                    </a>
+                  )
+                ) : (
+                  item.title
+                )}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="about-readmore">
+          <Link className="button" href="/news">
+            お知らせの一覧を見る →
+          </Link>
+        </div>
       </section>
 
       <section className="section">
         <SectionTitle
-          eyebrow="What I Do"
+          eyebrow="Services"
+          title="事業内容"
+          description="TRPGの「遊ぶ体験」をつくることを軸に、制作と頒布を行っています。"
+        />
+        <div className="link-grid contact-links">
+          <Link href="/services">
+            <span>素材の制作・頒布</span>
+            <small>背景・動く演出・小道具素材をBOOTHで。</small>
+          </Link>
+          <Link href="/services">
+            <span>シナリオの制作・頒布</span>
+            <small>長編『夢語りはティータイムのあとで』ほか。</small>
+          </Link>
+          <Link href="/services">
+            <span>立ち絵などの受託制作</span>
+            <small>XのDMでご依頼を受付中。</small>
+          </Link>
+          <Link href="/services">
+            <span>制作ツールの開発</span>
+            <small>製本ツールなど、制作を支える道具づくり。</small>
+          </Link>
+          <Link href="/services">
+            <span>同人作品の委託頒布</span>
+            <small>イベント出展時の委託を受付中。</small>
+          </Link>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="What We Make"
           title="3つの軸"
           description="ひとりの作り手として地続きの、3つの顔があります。"
         />
@@ -88,9 +157,9 @@ export default function Home() {
 
       <section className="section">
         <SectionTitle
-          eyebrow="About Me"
-          title="私について"
-          description="つくり手としての歩みと実績です。"
+          eyebrow="About"
+          title="つくり手について"
+          description="工房を営む、ひとりの作り手の歩みです。"
         />
         <div className="about-teaser">
           <div className="about-teaser-visual">
@@ -132,7 +201,7 @@ export default function Home() {
         />
         <div className="research-teaser">
           <p>
-            デジタルハリウッド大学大学院で、学長・藤井直敬先生のもとで研究しています。テーマは「現実科学」。
+            デジタルハリウッド大学大学院で、「現実科学」をテーマに研究しています。
             空想のなかで立ち上がる“共同幻想”は、現実に介入するひとつの手段ではないか――
             TRPGを通じて「現実とは何か」を考えるきっかけをつくっています。
           </p>
@@ -156,12 +225,15 @@ export default function Home() {
               </ul>
             </div>
             <div className="ai-note-col ai-note-no">
-              <p className="ai-note-label">生成AIは不使用</p>
+              <p className="ai-note-label">生成AIを使わない領域</p>
               <ul>
-                <li>2Dイラスト・立ち絵・キャラクターデザイン</li>
+                <li>ご依頼の立ち絵・キャラクターデザイン</li>
                 <li>アニメーションの作画</li>
               </ul>
-              <p className="ai-note-foot">イラスト・作画は、すべて自分の手で描いています。</p>
+              <p className="ai-note-foot">
+                ご依頼いただく立ち絵と、アニメーションの作画は自分の手で描いています。
+                生成AIを使う素材は、各商品ページに使用範囲を明記しています。
+              </p>
             </div>
           </div>
         </div>
@@ -190,7 +262,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Archive"
           title="制作の幅"
-          description="シナリオ、立ち絵、NPC、ロゴ、MAP、映像、Webプロダクトまで、作品世界に必要なものを横断して制作しています。以下の数字は、いずれも作品ページで内訳と制作例を確認いただけます。"
+          description="シナリオ、立ち絵、NPC、ロゴ、MAP、映像、Webプロダクトまで、作品世界に必要なものを横断して制作しています。以下の実績は、いずれも作品ページで内訳と制作例を確認いただけます。"
         />
         <div className="fact-grid">
           {facts.map((fact) => (
@@ -206,11 +278,11 @@ export default function Home() {
         </div>
         <div className="recruiter-cta">
           <div>
-            <h3>採用ご担当の方へ</h3>
-            <p>企画・プランナー／2Dデザイン・キャラクター／映像・アニメーションの職種別に、見どころを3分ほどでまとめています。</p>
+            <h3>ご依頼・お問い合わせ</h3>
+            <p>立ち絵のご依頼はX（@KASOkatsumata）のDMにて承っています。そのほかのご連絡は、お問い合わせページをご覧ください。</p>
           </div>
-          <Link className="button primary" href="/for-recruiters">
-            見どころを見る →
+          <Link className="button primary" href="/contact">
+            お問い合わせ →
           </Link>
         </div>
       </section>

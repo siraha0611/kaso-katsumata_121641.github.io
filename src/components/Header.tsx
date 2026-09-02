@@ -1,25 +1,33 @@
+import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 const navItems = [
   { href: "/", label: "Top" },
+  { href: "/news", label: "News" },
+  { href: "/services", label: "Services" },
   { href: "/works", label: "Works" },
   { href: "/gallery", label: "Gallery" },
   { href: "/published", label: "Published" },
   { href: "/research", label: "Research" },
   { href: "/tools", label: "Dev" },
   { href: "/about", label: "About" },
-  { href: "/story", label: "Story" },
   { href: "/contact", label: "Contact" }
 ];
-
-const navCta = { href: "/for-recruiters", label: "採用ご担当の方へ" };
 
 export function Header() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Top">
-        <span>Katsumata Sota</span>
-        <small>Portfolio 2026</small>
+      <Link className="brand" href="/" aria-label="KASO集落工房 Top">
+        <Image
+          className="brand-logo"
+          src={assetPath("/assets/kobo-logo-dark.png")}
+          alt="KASO集落工房"
+          width={938}
+          height={100}
+          priority
+        />
+        <small>TRPG素材・シナリオ・ツールの工房</small>
       </Link>
       <nav aria-label="Primary navigation">
         {navItems.map((item) => (
@@ -27,9 +35,6 @@ export function Header() {
             {item.label}
           </Link>
         ))}
-        <Link className="nav-cta" href={navCta.href}>
-          {navCta.label}
-        </Link>
       </nav>
     </header>
   );

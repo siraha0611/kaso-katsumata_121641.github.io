@@ -50,13 +50,95 @@ a {
 
 .brand {
   display: grid;
-  gap: 2px;
+  gap: 4px;
   font-family: Georgia, "Times New Roman", serif;
   letter-spacing: 0.04em;
 }
 
 .brand span {
   font-size: 18px;
+}
+
+.brand-logo {
+  width: auto;
+  height: 20px;
+}
+
+.hero .hero-logo-wrap,
+.hero-logo-wrap {
+  margin: 0;
+  line-height: 0;
+}
+
+.hero-logo {
+  display: block;
+  width: min(470px, 92%);
+  height: auto;
+}
+
+.news-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.news-row {
+  display: grid;
+  grid-template-columns: 92px auto 1fr;
+  gap: 8px 16px;
+  align-items: baseline;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+}
+
+.news-date {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  color: var(--smoke);
+  letter-spacing: 0.05em;
+}
+
+.news-chip {
+  justify-self: start;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding: 3px 10px;
+  border: 1px solid rgba(201, 168, 106, 0.55);
+  border-radius: 999px;
+  color: var(--smoke);
+  white-space: nowrap;
+}
+
+.news-title {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.news-title a,
+.news-row-link .news-title {
+  text-decoration-color: rgba(201, 168, 106, 0.7);
+  text-underline-offset: 4px;
+  text-decoration-line: underline;
+}
+
+.news-row-link:hover .news-title {
+  color: var(--accent, #9c7a3c);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .news-row {
+    grid-template-columns: auto auto;
+  }
+  .news-title {
+    grid-column: 1 / -1;
+  }
 }
 
 .brand small {

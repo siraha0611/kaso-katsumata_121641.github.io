@@ -12,9 +12,10 @@ export default function ContactPage() {
         description="制作物や活動に関する連絡先です。"
       />
       <section className="contact-card">
-        <p>ポートフォリオをご覧いただきありがとうございます。</p>
+        <p>KASO集落工房のサイトをご覧いただきありがとうございます。</p>
         <p>
-          ゲーム・エンタメ業界の2Dデザイン、キャラクター制作、TRPG / 物語企画、映像演出に関するご連絡は下記までお願いいたします。
+          立ち絵のご依頼はX（@KASOkatsumata）のDMにて承っています。素材・シナリオ・委託頒布のご相談、
+          お仕事のご連絡は、XのDMまたは下記メールまでお願いいたします。
         </p>
         <Link className="mail-link" href={`mailto:${profile.email}`}>
           {profile.email}

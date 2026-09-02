@@ -9,39 +9,40 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const baseUrl = `${siteOrigin}${basePath}`;
 const ogImage = `${baseUrl}/og.png`;
 const siteDescription =
-  "TRPGシナリオライター・2Dイラストレーター・AIネイティブ・ソロプレナー。勝俣颯太のポートフォリオ。卒業制作アニメ『-CORE-』、TRPGシナリオ『夢語りはティータイムのあとで』、Web作品、現実科学の研究まで。";
+  "TRPGの「遊ぶ体験」をつくる個人の工房。オンラインセッション向けの背景・演出素材と長編シナリオ『夢語りはティータイムのあとで』をBOOTHで頒布し、立ち絵の受託制作や制作ツールの開発も行っています。代表・制作: 勝俣颯太（KASO）。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${baseUrl}/`),
   title: {
-    default: "勝俣 颯太 ― TRPG・イラスト・アニメーション ポートフォリオ",
-    template: "%s | Katsumata Sota"
+    default: "KASO集落工房 ― TRPG素材・シナリオ・ツールの工房",
+    template: "%s | KASO集落工房"
   },
   description: siteDescription,
   keywords: [
+    "KASO集落工房",
     "勝俣颯太",
-    "Katsumata Sota",
-    "ポートフォリオ",
+    "KASO",
     "TRPG",
+    "TRPG素材",
+    "オンラインセッション素材",
     "TRPGシナリオ",
+    "夢語りはティータイムのあとで",
+    "立ち絵",
     "2Dイラスト",
-    "キャラクターデザイン",
-    "アニメーション",
-    "クトゥルフ神話TRPG",
-    "現実科学"
+    "BOOTH"
   ],
   openGraph: {
     type: "website",
     locale: "ja_JP",
     url: `${baseUrl}/`,
-    siteName: "Katsumata Sota Portfolio",
-    title: "勝俣 颯太 ― TRPG・イラスト・アニメーション ポートフォリオ",
+    siteName: "KASO集落工房",
+    title: "KASO集落工房 ― TRPG素材・シナリオ・ツールの工房",
     description: siteDescription,
-    images: [{ url: ogImage, width: 1200, height: 630, alt: "Katsumata Sota Portfolio" }]
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "KASO集落工房" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "勝俣 颯太 ― Katsumata Sota Portfolio",
+    title: "KASO集落工房 ― TRPG素材・シナリオ・ツールの工房",
     description: siteDescription,
     images: [ogImage]
   }
