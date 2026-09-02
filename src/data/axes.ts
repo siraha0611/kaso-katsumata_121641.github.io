@@ -35,12 +35,12 @@ export const axes: Axis[] = [
       "立ち絵でも、キャラクター単体ではなく舞台・役割・関係性から立ち上げるのが信条。ご依頼では依頼者のキャラクター像を第一に、セッションで映える形へ整えてお渡ししています。"
     ],
     works: [
-      { title: "-CORE-（卒業制作アニメ）", slug: "core-animation" },
-      { title: "Glenda（自主制作アニメ）", slug: "glenda" },
+      { title: "立ち絵アーカイブ", slug: "standing-archive" },
       { title: "お依頼いただいたお仕事", slug: "commission-works" },
-      { title: "立ち絵アーカイブ", slug: "standing-archive" }
+      { title: "夢語りはティータイムのあとで（NPC立ち絵）", slug: "yumegatari-teatime" },
+      { title: "-CORE-（卒業制作アニメ）", slug: "core-animation" }
     ],
-    image: "/assets/core-flyer-front.png"
+    image: "/assets/yumegatari-npc-display.png"
   },
   {
     no: "03",
@@ -57,6 +57,6 @@ export const axes: Axis[] = [
       { title: "Taku with CoC", slug: "taku-with-coc" },
       { title: "TRPG向け 動く演出素材", slug: "booth-motion-assets" }
     ],
-    image: "/assets/tobira-title.png"
+    image: "/assets/aikp-session.png"
   }
 ];

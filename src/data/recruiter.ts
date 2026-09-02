@@ -43,7 +43,7 @@ export const facts: FactItem[] = [
     value: "3",
     unit: "本",
     label: "アニメーション作品",
-    note: "『impossible』『Glenda』『-CORE-』。全編を公開し、『-CORE-』の絵コンテ39ページも掲載。"
+    note: "卒業制作『-CORE-』と自主制作2本。全編を公開し、『-CORE-』の絵コンテ39ページも掲載。"
   },
   {
     value: "2",
