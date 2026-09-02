@@ -12,7 +12,7 @@ import { assetPath, thumbnailPath } from "@/lib/assetPath";
 export default function Home() {
   return (
     <main>
-      <section className="hero">
+      <section className="hero hero-brand">
         <div className="hero-copy">
           <p className="eyebrow">KASO VILLAGE STUDIO</p>
           <Image
@@ -49,9 +49,6 @@ export default function Home() {
             </Link>
           </div>
           <p className="hero-name-ja">代表・制作: {profile.nameJa}（KASO）</p>
-        </div>
-        <div className="hero-visual" aria-label="Featured artwork">
-          <Image src={assetPath(thumbnailPath("/assets/yumegatari-title.png"))} alt="夢語りはティータイムのあとで" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
         </div>
       </section>
 
