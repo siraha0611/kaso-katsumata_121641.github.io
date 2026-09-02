@@ -66,6 +66,13 @@ a {
   height: 24px;
 }
 
+.hero-mascot {
+  display: block;
+  width: min(210px, 46%);
+  height: auto;
+  margin: 0 0 6px -8px;
+}
+
 .hero .hero-logo-wrap {
   margin: 0;
   line-height: 0;

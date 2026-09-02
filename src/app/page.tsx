@@ -15,6 +15,14 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">KASO VILLAGE STUDIO</p>
+          <Image
+            className="hero-mascot"
+            src={assetPath("/assets/sirobaneko.png")}
+            alt="工房のマスコット シロバネコ"
+            width={900}
+            height={507}
+            priority
+          />
           <h1 className="hero-logo-wrap">
             <Image
               className="hero-logo"
