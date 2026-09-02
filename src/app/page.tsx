@@ -63,6 +63,17 @@ export default function Home() {
       </section>
 
       <section className="section compact">
+        <SectionTitle eyebrow="Philosophy" title={"遊びを超える\n感情体験を"} />
+        <div className="about-copy">
+          <p>
+            TRPGは遊びです。けれど、卓の上で起きること――手に汗を握る判定、仲間との笑い、
+            物語の終わりに残る寂しさ――は、遊びの枠を超えて心に残ります。
+            KASO集落工房がつくるものは、素材もシナリオもツールも、すべてその感情体験のためにあります。
+          </p>
+        </div>
+      </section>
+
+      <section className="section compact">
         <SectionTitle
           eyebrow="News"
           title="お知らせ"
