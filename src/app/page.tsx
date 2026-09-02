@@ -15,7 +15,16 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">KASO VILLAGE STUDIO</p>
-          <h1 className="hero-title-ja">KASO集落工房</h1>
+          <h1 className="hero-logo-wrap">
+            <Image
+              className="hero-logo"
+              src={assetPath("/assets/kobo-logo-ab-dark.png")}
+              alt="KASO集落工房"
+              width={3304}
+              height={448}
+              priority
+            />
+          </h1>
           <p className="lead">TRPGの「遊ぶ体験」を、まるごとつくる工房。</p>
           <p className="hero-roles">
             素材・シナリオの制作と頒布 ／ 立ち絵の受託制作 ／ 制作ツールの開発
