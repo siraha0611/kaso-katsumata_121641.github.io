@@ -250,7 +250,7 @@ export const works: Work[] = [
       }
     ],
     outcome:
-      "BOOTHで頒布中。本文200ページ超に加えて、背景画像245枚・NPC立ち絵・MAP資料10点・スクリーンパネル8種・KP演出用の動く素材8シーンまで、総計400ファイル超の素材セットを一人で一貫して組み立てました。",
+      "BOOTHで頒布中。本文200ページ超に加えて、背景画像245枚・NPC立ち絵・MAP資料10点・スクリーンパネル8種・KP演出用の動く素材8シーンまで、総計400ファイル超の素材セットを一人で一貫して組み立てました。物理版（B5・248ページ）は2026年9月に入稿を終え、ゲームマーケット2026秋（10月18日・スペースV009）で頒布する予定です。",
     links: [
       { href: "https://booth.pm/ja/items/8045336", label: "BOOTHで見る" },
       {
@@ -816,6 +816,44 @@ export const works: Work[] = [
     ],
     outcome:
       "全7シーンをBOOTHで¥500で頒布中。神話生物シリーズの第1弾として、反応を見ながら次の神格へ展開していきます。"
+  },
+  {
+    slug: "kaso-intro-pv",
+    title: "自己紹介PV",
+    subtitle: "モーショングラフィックス ― 95秒・音楽も自作",
+    category: "映像/トレーラー",
+    year: "2026",
+    hero: "/assets/kaso-intro-pv-poster.jpg",
+    images: [
+      "/assets/kaso-intro-pv-poster.jpg",
+      "/assets/kaso-intro-pv-scene-core.jpg",
+      "/assets/kaso-intro-pv-scene-illust.jpg",
+      "/assets/kaso-intro-pv-scene-trpg.jpg",
+      "/assets/kaso-intro-pv-scene-ai.jpg",
+      "/assets/kaso-intro-pv-scene-philosophy.jpg"
+    ],
+    video: "/assets/video/kaso-intro-pv-720.mp4",
+    excerpt:
+      "アニメーション、立ち絵、TRPGシナリオ、AIを使った開発、そして工房の理念まで。これまでの制作を95秒にまとめた、モーショングラフィックスの自己紹介映像です。",
+    concept:
+      "「はじめまして」から「遊びを超える感情体験を」まで、ひとりの作り手の歩みを、プロフィール・原点・作品・理念の順に場面を切り替えて紹介します。画面の四隅に計器のような枠を置き、大きな言葉と図形のワイプで場面を切り替える構成にしました。映像に使った作品画像は、すべてこのサイトで公開済みのものです。",
+    role: ["企画", "構成", "モーショングラフィックス", "音楽", "編集"],
+    tools: ["Python（PIL / NumPy / SciPy）", "ffmpeg"],
+    process: [
+      "サイトに掲載している作品から、各場面で見せる画像と一言を選んで構成を決める",
+      "テンポ120（1小節2秒）の曲を先に作り、場面の切り替えをすべて小節の頭に合わせる",
+      "枠・文字・図形の動きをプログラムで描き、1920×1080・30fpsで書き出す（サイト掲載版は1280×720）"
+    ],
+    sections: [
+      {
+        title: "音楽について",
+        body: [
+          "BGMは既存の曲やサンプル音源を使わず、音色から数式で組み立てたオリジナルです。映像と同じプログラムの中で作っているため、場面の切り替えと曲の区切りがぴったり揃います。"
+        ]
+      }
+    ],
+    outcome:
+      "2026年9月に制作し、このサイトのトップページで公開しています。"
   },
   {
     slug: "glenda",

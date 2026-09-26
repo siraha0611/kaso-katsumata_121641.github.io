@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 import { WorkCard } from "@/components/WorkCard";
+import { HeroParticles } from "@/components/HeroParticles";
+import { Marquee } from "@/components/Marquee";
+import { PvPlayer } from "@/components/PvPlayer";
 import { featuredWorks, works } from "@/data/works";
 import { profile } from "@/data/profile";
 import { axes } from "@/data/axes";
@@ -13,16 +16,33 @@ export default function Home() {
   return (
     <main>
       <section className="hero hero-brand">
+        <HeroParticles />
+        <div className="hero-hud" aria-hidden="true">
+          <span className="is-tl" />
+          <span className="is-tr" />
+          <span className="is-bl" />
+          <span className="is-br" />
+        </div>
+        <div className="hero-scroll-cue" aria-hidden="true">
+          <span>SCROLL</span>
+          <i />
+        </div>
+        <p className="hero-est" aria-hidden="true">KASO VILLAGE STUDIO — EST. 2026</p>
         <div className="hero-copy">
           <p className="eyebrow">KASO VILLAGE STUDIO</p>
-          <Image
-            className="hero-mascot"
-            src={assetPath("/assets/sirobaneko.png")}
-            alt="工房のマスコット シロバネコ"
-            width={900}
-            height={507}
-            priority
-          />
+          <div className="hero-mascot-stage">
+            <span className="hero-ring ring-one" aria-hidden="true" />
+            <span className="hero-ring ring-two" aria-hidden="true" />
+            <span className="hero-ring ring-three" aria-hidden="true" />
+            <Image
+              className="hero-mascot"
+              src={assetPath("/assets/sirobaneko.png")}
+              alt="工房のマスコット シロバネコ"
+              width={900}
+              height={507}
+              priority
+            />
+          </div>
           <h1 className="hero-logo-wrap">
             <Image
               className="hero-logo"
@@ -52,6 +72,8 @@ export default function Home() {
         </div>
       </section>
 
+      <Marquee />
+
       <section className="intro-band">
         <p>
           セッションの画面をつくる素材から、長編シナリオ、制作を支えるツールまで。
@@ -59,14 +81,26 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="section compact">
-        <SectionTitle eyebrow="Philosophy" title={"遊びを超える\n感情体験を"} />
+      <section className="section compact philosophy-section">
+        <SectionTitle eyebrow="Philosophy" title={"遊びを超える\n感情体験を"} kinetic />
         <div className="about-copy">
           <p>
             TRPGは遊びです。けれど、卓の上で起きること――手に汗を握る判定、仲間との笑い、
             物語の終わりに残る寂しさ――は、遊びの枠を超えて心に残ります。
             KASO集落工房がつくるものは、素材もシナリオもツールも、すべてその感情体験のためにあります。
           </p>
+        </div>
+      </section>
+
+      <section className="section compact pv-section">
+        <SectionTitle
+          eyebrow="Film"
+          title="動く自己紹介"
+          description="プロフィールから作品、工房の理念まで、95秒のモーショングラフィックスで紹介します（音楽も自作）。"
+        />
+        <PvPlayer />
+        <div className="pv-more">
+          <Link href="/works/kaso-intro-pv">作品ページで詳しく見る →</Link>
         </div>
       </section>
 
