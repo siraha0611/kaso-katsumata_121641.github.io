@@ -30,10 +30,7 @@ export default function ForRecruitersPage() {
             以下の数値は、いずれも作品ページで内訳と制作例を確認いただけます。
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/portfolio-katsumata-sota.pdf" target="_blank" rel="noreferrer">
-              ポートフォリオPDF
-            </Link>
-            <Link className="button" href="/works">
+            <Link className="button primary" href="/works">
               作品一覧を見る →
             </Link>
             <Link className="button" href={`mailto:${profile.email}`}>
