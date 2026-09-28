@@ -25,7 +25,7 @@ export function PvPlayer() {
           controls
           playsInline
           preload="none"
-          aria-label="勝俣颯太（KASO）自己紹介PV 本編（1分35秒）"
+          aria-label="KASO／勝俣 自己紹介PV 本編（1分27秒）"
         />
       ) : (
         <>
@@ -41,10 +41,10 @@ export function PvPlayer() {
             aria-hidden="true"
             tabIndex={-1}
           />
-          <button className="pv-play" type="button" onClick={() => setShowFull(true)} aria-label="自己紹介PV本編を再生（1分35秒）">
+          <button className="pv-play" type="button" onClick={() => setShowFull(true)} aria-label="自己紹介PV本編を再生（1分27秒）">
             <span className="pv-play-icon" aria-hidden="true" />
             <span>本編を再生</span>
-            <small>1:35</small>
+            <small>1:27</small>
           </button>
         </>
       )}

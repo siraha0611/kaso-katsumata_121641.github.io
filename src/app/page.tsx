@@ -96,7 +96,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Film"
           title="動く自己紹介"
-          description="プロフィールから作品、工房の理念まで、95秒のモーショングラフィックスで紹介します（音楽も自作）。"
+          description="プロフィールから作品、工房の理念まで、87秒のモーショングラフィックスで紹介します（音楽も自作）。"
         />
         <PvPlayer />
         <div className="pv-more">

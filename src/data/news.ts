@@ -14,7 +14,7 @@ export const news: NewsItem[] = [
   {
     date: "2026.09.27",
     category: "新作",
-    title: "モーショングラフィックスの自己紹介PV（95秒・音楽も自作）を公開しました",
+    title: "モーショングラフィックスの自己紹介PV（87秒・音楽も自作）を公開しました",
     href: "/works/kaso-intro-pv"
   },
   {
