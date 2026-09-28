@@ -68,7 +68,7 @@ export default function Home() {
               お知らせ
             </Link>
           </div>
-          <p className="hero-name-ja">代表・制作: {profile.nameJa}（KASO）</p>
+          <p className="hero-name-ja">代表・制作: {profile.nameJa}</p>
         </div>
       </section>
 

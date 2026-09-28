@@ -10,7 +10,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const baseUrl = `${siteOrigin}${basePath}`;
 const ogImage = `${baseUrl}/og.png`;
 const siteDescription =
-  "TRPGの「遊ぶ体験」をつくる個人の工房。オンラインセッション向けの背景・演出素材と長編シナリオ『夢語りはティータイムのあとで』をBOOTHで頒布し、立ち絵の受託制作や制作ツールの開発も行っています。代表・制作: 勝俣颯太（KASO）。";
+  "TRPGの「遊ぶ体験」をつくる個人の工房。オンラインセッション向けの背景・演出素材と長編シナリオ『夢語りはティータイムのあとで』をBOOTHで頒布し、立ち絵の受託制作や制作ツールの開発も行っています。代表・制作: KASO / 勝俣。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${baseUrl}/`),
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "KASO集落工房",
-    "勝俣颯太",
+    "KASO/勝俣",
     "KASO",
     "TRPG",
     "TRPG素材",

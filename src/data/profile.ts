@@ -1,6 +1,6 @@
 export const profile = {
-  nameJa: "勝俣 颯太",
-  nameEn: "Katsumata Sota",
+  nameJa: "KASO / 勝俣",
+  nameEn: "KASO Katsumata",
   handle: "KASO/勝俣",
   role: "Illustration / TRPG / Animation",
   tagline: "喫茶店の明かり、夢の入口、物語を遊びに変えるデザイン。",

@@ -6,7 +6,7 @@ import { assetPath, thumbnailPath } from "@/lib/assetPath";
 
 export const metadata = {
   title: "生い立ち",
-  description: "勝俣颯太の生い立ち。子ども時代の創作から、アニメーション、TRPG、大学院での研究まで。"
+  description: "KASO / 勝俣の生い立ち。子ども時代の創作から、アニメーション、TRPG、大学院での研究まで。"
 };
 
 type Chapter = {

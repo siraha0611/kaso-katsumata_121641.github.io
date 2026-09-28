@@ -7,7 +7,7 @@ import { profile } from "@/data/profile";
 export const metadata: Metadata = {
   title: "採用ご担当の方へ",
   description:
-    "勝俣颯太のポートフォリオを短時間でご覧いただくための案内です。企画・プランナー／2Dデザイン・キャラクター／映像・アニメーションの職種別に、見ていただきたい作品と担当範囲をまとめています。"
+    "KASO / 勝俣のポートフォリオを短時間でご覧いただくための案内です。企画・プランナー／2Dデザイン・キャラクター／映像・アニメーションの職種別に、見ていただきたい作品と担当範囲をまとめています。"
 };
 
 export default function ForRecruitersPage() {

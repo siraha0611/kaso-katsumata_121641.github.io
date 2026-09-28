@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div>
         <p>KASO集落工房</p>
-        <span>代表・制作: {profile.nameJa}（KASO）</span>
+        <span>代表・制作: {profile.nameJa}</span>
       </div>
       <div className="footer-links">
         <a href="https://kasokatsumata.booth.pm/" target="_blank" rel="noreferrer">

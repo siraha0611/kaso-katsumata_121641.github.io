@@ -1,6 +1,6 @@
-# Katsumata Sota — Portfolio 2026
+# KASO集落工房 — KASO / 勝俣
 
-TRPGシナリオ・2Dイラスト・アニメーション・Web企画を横断する、勝俣颯太のポートフォリオサイトです。
+TRPGシナリオ・2Dイラスト・アニメーション・Web企画を横断する、KASO / 勝俣のポートフォリオサイトです。
 
 **Live:** https://siraha0611.github.io/kaso-katsumata_121641.github.io/
 
@@ -41,4 +41,4 @@ npm run build  # 静的書き出し → out/
 
 ## クレジット
 
-サイトの設計・実装・運用は勝俣颯太が [Claude Code](https://claude.com/claude-code) を活用して行っています。掲載作品の著作権はすべて勝俣颯太に帰属します（クレジット記載のある素材・楽曲を除く）。無断転載はご遠慮ください。
+サイトの設計・実装・運用はKASO / 勝俣が [Claude Code](https://claude.com/claude-code) を活用して行っています。掲載作品の著作権はすべてKASO / 勝俣に帰属します（クレジット記載のある素材・楽曲を除く）。無断転載はご遠慮ください。
