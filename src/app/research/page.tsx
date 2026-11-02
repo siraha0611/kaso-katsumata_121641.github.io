@@ -24,14 +24,39 @@ const notes = [
     href: "https://note.com/061112160922/n/nb55fc5a65319"
   },
   {
+    title: "作った探索者を“もっと好きになる”楽しみ方【キャラクター沼編】",
+    tag: "初心者向け連載",
+    href: "https://note.com/061112160922/n/n98e3dbb79057"
+  },
+  {
     title: "はじめてゲームを回すときに気をつけること【キーパー編】",
     tag: "初心者向け連載",
     href: "https://note.com/061112160922/n/n62e7c343c592"
   },
   {
+    title: "タイマン卓を「濃く、止めずに」回すコツ【上級編】",
+    tag: "卓の人数別・上級編",
+    href: "https://note.com/061112160922/n/n40d49cb59bb5"
+  },
+  {
+    title: "2人卓で「相棒感」を活かす回しかた【上級編】",
+    tag: "卓の人数別・上級編",
+    href: "https://note.com/061112160922/n/nf43ee250b0c1"
+  },
+  {
+    title: "4人以上の卓で、全員に出番を回す進行術【上級編】",
+    tag: "卓の人数別・上級編",
+    href: "https://note.com/061112160922/n/n22b3fd6d7f8a"
+  },
+  {
     title: "Claude CodeでTRPGココフォリア構築術【自動化・キャラ自動作成編】",
     tag: "AI × TRPG",
     href: "https://note.com/061112160922/n/nbd7b03331132"
+  },
+  {
+    title: "Claude CodeでTRPGココフォリア構築術【自動化・シーン自動作成編】",
+    tag: "AI × TRPG",
+    href: "https://note.com/061112160922/n/ncb1106efde93"
   },
   {
     title: "CoCTRPGシナリオをAIで作ってみた話（実録）",
@@ -180,6 +205,10 @@ export default function ResearchPage() {
             制作物だけでなく、はじめての人がつまずきやすいポイントを言葉でほどく記事を、Noteで継続的に書いています。
             日程合わせ、キャラクターづくり、はじめてのキーパー……「ここで迷う」を先回りして、やさしく案内する。
             これも、TRPGを初心者にも届きやすくすることを目指した、動線づくりの一部です。
+          </p>
+          <p>
+            少し慣れてきた人に向けては、タイマン卓・2人卓・4人以上の卓と、卓の人数ごとにちがう「回しかたのコツ」を【上級編】としてまとめました。
+            入口の先で、続けて遊ぶ人を支える記事も少しずつ増やしています。
           </p>
         </div>
         <div className="link-grid contact-links">
