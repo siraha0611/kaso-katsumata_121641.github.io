@@ -1,4 +1,4 @@
-export type NewsCategory = "お知らせ" | "新作" | "イベント" | "制作";
+export type NewsCategory = "お知らせ" | "新作" | "イベント" | "制作" | "記事";
 
 export type NewsItem = {
   /** 表示用の日付。日まで確定していないものは "2026.08" のように月まででよい */
@@ -11,6 +11,12 @@ export type NewsItem = {
 
 /** 新しいものを先頭に追記していく */
 export const news: NewsItem[] = [
+  {
+    date: "2026.10.18",
+    category: "イベント",
+    title: "ゲームマーケット2026秋（幕張メッセ・日曜スペースV009）に出展し、『夢語りはティータイムのあとで』物理版を初頒布しました。ご来場いただいた皆さま、ありがとうございました",
+    href: "/works/yumegatari-teatime"
+  },
   {
     date: "2026.09.27",
     category: "新作",
@@ -67,6 +73,12 @@ export const news: NewsItem[] = [
     category: "新作",
     title: "喫茶店・カフェの背景素材など、新作素材パックをBOOTHで頒布中です",
     href: "https://kasokatsumata.booth.pm/"
+  },
+  {
+    date: "2026.06",
+    category: "記事",
+    title: "noteで、クトゥルフ神話TRPGを卓の人数ごとに回すコツをまとめた【上級編】3本（タイマン卓・2人卓・4人以上の卓）を公開しました",
+    href: "/research"
   }
 ];
 
