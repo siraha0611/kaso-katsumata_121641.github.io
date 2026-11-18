@@ -799,9 +799,14 @@ h3 {
 
 .about-teaser-visual {
   position: relative;
-  min-height: 400px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
   border: 1px solid var(--line);
   background: var(--soft-paper);
+}
+
+.about-teaser-visual img {
+  object-fit: contain;
 }
 
 .about-teaser-name {
@@ -887,7 +892,8 @@ h3 {
   }
 
   .about-teaser-visual {
-    min-height: 320px;
+    width: 100%;
+    max-width: 420px;
   }
 }
 
