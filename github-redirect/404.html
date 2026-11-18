@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>KASO集落工房は kaso-kobo.com へ移転しました</title>
+<link rel="canonical" href="https://kaso-kobo.com/">
+<script>
+  // 旧URL（/kaso-katsumata_121641.github.io/〜）の下の階層を保ったまま新ドメインへ移す
+  (function () {
+    var oldBase = "/kaso-katsumata_121641.github.io";
+    var path = location.pathname;
+    if (path.indexOf(oldBase) === 0) path = path.slice(oldBase.length);
+    if (path === "" || path.charAt(0) !== "/") path = "/" + path;
+    location.replace("https://kaso-kobo.com" + path + location.search + location.hash);
+  })();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://kaso-kobo.com/"></noscript>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f6f1e7; color: #413b35; font-family: system-ui, sans-serif; padding: 16px; text-align: center; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<p>KASO集落工房のサイトは<br><a href="https://kaso-kobo.com/">kaso-kobo.com</a> へ移転しました。</p>
+</body>
+</html>

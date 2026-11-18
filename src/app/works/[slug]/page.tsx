@@ -5,6 +5,7 @@ import { LiteYouTube } from "@/components/LiteYouTube";
 import { SectionTitle } from "@/components/SectionTitle";
 import { getWork, works } from "@/data/works";
 import { assetPath, thumbnailPath } from "@/lib/assetPath";
+import { basePath, siteOrigin } from "@/lib/site";
 
 type WorkDetailPageProps = {
   params: {
@@ -21,8 +22,6 @@ export function generateMetadata({ params }: WorkDetailPageProps) {
   if (!work) {
     return { title: "Work" };
   }
-  const siteOrigin = "https://siraha0611.github.io";
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const heroImage = `${siteOrigin}${basePath}${thumbnailPath(work.hero)}`;
   return {
     title: work.title,

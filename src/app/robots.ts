@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
+import { basePath, siteOrigin } from "@/lib/site";
 
-const siteOrigin = "https://siraha0611.github.io";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const dynamic = "force-static";
 

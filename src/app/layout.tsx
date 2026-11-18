@@ -3,10 +3,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MotionFx } from "@/components/MotionFx";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { basePath, siteOrigin } from "@/lib/site";
 import "./globals.css";
 
-const siteOrigin = "https://siraha0611.github.io";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const baseUrl = `${siteOrigin}${basePath}`;
 const ogImage = `${baseUrl}/og.png`;
 const siteDescription =
